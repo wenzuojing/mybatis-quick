@@ -75,6 +75,28 @@ public class AutoGenerator {
         PATH_SERVICE = getFilePath(gf.getPath(), "service");
         PATH_SERVICE_IMPL = getFilePath(PATH_SERVICE, "impl");
 
+       /* File fileEntity = new File(PATH_ENTITY) ;
+        File fileMapper = new File(PATH_MAPPER) ;
+        File fileXml = new File(PATH_XML) ;
+        File fileService = new File(PATH_SERVICE) ;
+        File fileServiceImp = new File(PATH_SERVICE_IMPL) ;
+
+        if(!fileEntity.exists()){
+            fileEntity.mkdirs();
+        }
+        if(!fileEntity.exists()){
+            fileEntity.mkdirs();
+        }
+        if(!fileEntity.exists()){
+            fileEntity.mkdirs();
+        }
+        if(!fileEntity.exists()){
+            fileEntity.mkdirs();
+        }
+        if(!fileEntity.exists()){
+            fileEntity.mkdirs();
+        }*/
+
         /**
          * 开启生成映射关系
          */

@@ -17,6 +17,8 @@ package com.github.wens.mybatisplus.plugins.pagination;
 
 import org.apache.ibatis.session.RowBounds;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * 简单分页模型
@@ -27,7 +29,7 @@ import org.apache.ibatis.session.RowBounds;
  * @author hubin
  * @Date 2016-01-23
  */
-public class Pagination extends RowBounds {
+public class Pagination extends RowBounds implements Serializable {
 
     /* 总数 */
     private int total;
