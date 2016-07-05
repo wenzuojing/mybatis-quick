@@ -375,6 +375,8 @@ public class AutoGenerator {
         bw.newLine();
         bw.write("import com.github.wens.mybatisplus.annotations.TableName;");
         bw.newLine();
+        bw.write("import com.github.wens.mybatisplus.examples.Example;");
+        bw.newLine();
         bw = buildClassComment(bw, tableComment);
         bw.newLine();
         bw.write("@TableName(value = \"" + table + "\")");
@@ -385,6 +387,14 @@ public class AutoGenerator {
         bw.write("\t@TableField(exist = false)");
         bw.newLine();
         bw.write("\tprivate static final long serialVersionUID = 1L;");
+        bw.newLine();
+        bw.newLine();
+
+        bw.write("\tpublic static Example<"+beanName+"> createExample(){");
+        bw.newLine();
+        bw.write("\t\treturn new Example<"+beanName+">("+beanName+".class);");
+        bw.newLine();
+        bw.write("\t}");
         bw.newLine();
         int size = fieldInfos.size();
         for (int i = 0; i < size; i++) {
