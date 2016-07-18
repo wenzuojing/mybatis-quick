@@ -48,7 +48,7 @@ public class AutoGeneratorTest {
 		/* 此处可以配置 SuperServiceImpl 子类路径，默认如下 */
         //cg.setSuperServiceImpl("com.baomidou.framework.service.impl.SuperServiceImpl");
 
-        cg.setSaveDir("/Users/wens/zy/live-web/src/main/java/com/zy/live");// 生成文件保存位置
+        cg.setSaveDir("/Users/wens/zy/mybatis-quick/code");// 生成文件保存位置
 
 		/*
          * 设置字段是否为驼峰命名，驼峰 true 下划线分割 false

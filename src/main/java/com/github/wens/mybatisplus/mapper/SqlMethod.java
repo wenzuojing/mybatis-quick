@@ -52,7 +52,7 @@ public enum SqlMethod {
      */
     SELECT_BY_ID("selectById", "根据ID 查询一条数据", "SELECT %s FROM %s WHERE %s=#{%s}"),
     SELECT_BATCH("selectByIds", "根据ID集合，批量查询数据", "<script>SELECT %s FROM %s WHERE %s IN (%s)</script>"),
-    SELECT_ONE_BY_EXAMPLE("selectOneByExample", "查询满足条件一条数据", "<script>SELECT %s FROM %s %s</script>"),
+    SELECT_ONE_BY_EXAMPLE("selectOneByExample", "查询满足条件一条数据", "<script>SELECT %s FROM %s %s LIMIT 1</script>"),
     SELECT_LIST("selectListByExample", "查询满足条件所有数据", "<script>SELECT %s FROM %s %s</script>"),
     SELECT_PAGE("selectPageByExample", "查询满足条件所有数据", "<script>SELECT %s FROM %s %s</script>"),
 

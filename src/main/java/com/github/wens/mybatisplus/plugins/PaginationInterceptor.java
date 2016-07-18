@@ -23,6 +23,7 @@ import org.apache.ibatis.executor.parameter.ParameterHandler;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
+import org.apache.ibatis.mapping.ParameterMapping;
 import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.SystemMetaObject;
@@ -33,6 +34,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -145,10 +147,20 @@ public class PaginationInterceptor implements Interceptor {
         ResultSet rs = null;
         try {
             pstmt = connection.prepareStatement(countSql.toString());
-            BoundSql countBS = new BoundSql(mappedStatement.getConfiguration(), countSql.toString(),
+           BoundSql countBS = new BoundSql(mappedStatement.getConfiguration(), countSql.toString(),
                     boundSql.getParameterMappings(), boundSql.getParameterObject());
             ParameterHandler parameterHandler = new DefaultParameterHandler(mappedStatement,
                     boundSql.getParameterObject(), countBS);
+
+            List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
+            if(parameterMappings != null ){
+                for(ParameterMapping pm : parameterMappings ){
+                    if(boundSql.getAdditionalParameter(pm.getProperty()) != null ){
+                        countBS.setAdditionalParameter( pm.getProperty() , boundSql.getAdditionalParameter(pm.getProperty()) ) ;
+                    }
+
+                }
+            }
             parameterHandler.setParameters(pstmt);
             rs = pstmt.executeQuery();
             int total = 0;
@@ -156,13 +168,7 @@ public class PaginationInterceptor implements Interceptor {
                 total = rs.getInt(1);
             }
             page.setTotal(total);
-            /**
-             * 当前页大于总页数，当前页设置为第一页
-             */
-            if (page.getCurrent() > page.getPages()) {
-                page = new Pagination(1, page.getSize());
-                page.setTotal(total);
-            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
