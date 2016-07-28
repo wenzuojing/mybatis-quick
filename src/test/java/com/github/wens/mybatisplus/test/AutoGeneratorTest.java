@@ -48,7 +48,7 @@ public class AutoGeneratorTest {
 		/* 此处可以配置 SuperServiceImpl 子类路径，默认如下 */
         //cg.setSuperServiceImpl("com.baomidou.framework.service.impl.SuperServiceImpl");
 
-        cg.setSaveDir("/Users/wens/zy/mybatis-quick/code");// 生成文件保存位置
+        cg.setSaveDir("/home/wens/zy/mybatis-quick/code");// 生成文件保存位置
 
 		/*
          * 设置字段是否为驼峰命名，驼峰 true 下划线分割 false
@@ -57,9 +57,9 @@ public class AutoGeneratorTest {
 
 		/* 数据库相关配置 */
         cg.setDbDriverName("com.mysql.jdbc.Driver");
-        cg.setDbUser("root");
+        cg.setDbUser("zyapp");
         cg.setDbPassword("123456");
-        cg.setDbUrl("jdbc:mysql://127.0.0.1:3306/live?characterEncoding=utf8");
+        cg.setDbUrl("jdbc:mysql://172.20.11.6:3306/live?useUnicode=true&characterEncoding=utf8");
 
 		/*
 		 * 表主键 ID 生成类型, 自增该设置无效。

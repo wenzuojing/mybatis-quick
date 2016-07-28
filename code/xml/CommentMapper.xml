@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.live.mapper.CommentMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 comment_id AS commentId, content AS content, author_id AS authorId, author_name AS authorName, deleted AS deleted, create_time AS createTime, update_time AS updateTime, comment_for AS commentFor, avatar AS avatar, hash AS hash
+	</sql>
+
+</mapper>
