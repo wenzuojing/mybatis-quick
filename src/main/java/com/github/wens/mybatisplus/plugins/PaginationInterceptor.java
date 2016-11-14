@@ -170,14 +170,20 @@ public class PaginationInterceptor implements Interceptor {
             page.setTotal(total);
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Execute count fail!" ,e) ;
         } finally {
             try {
-                rs.close();
-                pstmt.close();
+                if(rs != null ){
+                    rs.close();
+                }
+                if(pstmt != null ){
+                    pstmt.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             }
+
+
         }
         return page;
     }

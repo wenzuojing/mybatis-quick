@@ -669,13 +669,15 @@ public class AutoGenerator {
         bw.write("\t<sql id=\"Base_Column_List\">");
         bw.newLine();
 
+        String shortTableName  = shortTableName(fieldInfos.get(0).table);
+
         for (int i = 0; i < size; i++) {
             String column = fieldInfos.get(i).column;
             IdInfo idInfo = idMap.get(column);
             if (idInfo != null) {
-                bw.write("\t\t " + column + " AS " + processField(column));
+                bw.write("\t\t " + shortTableName+"."+column + " AS " + processField(column));
             } else {
-                bw.write(" " + column + " AS " + processField(column));
+                bw.write(" " + shortTableName+"."+column + " AS " + processField(column));
             }
             if (i != size - 1) {
                 bw.write(",");
@@ -685,6 +687,10 @@ public class AutoGenerator {
         bw.write("\t</sql>");
         bw.newLine();
         bw.newLine();
+    }
+
+    private String shortTableName(String tableName) {
+        return "" + tableName.charAt(0);
     }
 
     /**
