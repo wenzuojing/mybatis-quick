@@ -35,6 +35,8 @@ public class Page<T> extends Pagination {
      */
     private List<T> records = Collections.emptyList();
 
+    private Object  extra ;
+
 
     protected Page() {
         /* 保护 */
@@ -55,6 +57,13 @@ public class Page<T> extends Pagination {
         this.records = records;
     }
 
+    public Object getExtra() {
+        return extra;
+    }
+
+    public void setExtra(Object extra) {
+        this.extra = extra;
+    }
 
     @Override
     public String toString() {
