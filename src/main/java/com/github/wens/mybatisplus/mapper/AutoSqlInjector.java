@@ -379,7 +379,7 @@ public class AutoSqlInjector {
         where.append("\n</where>\n</if>");
         where.append("\n<if test=\"ew.orderByField!=null\">\n${ew.orderByField}\n</if>");
         where.append("\n</if>");*/
-        String sql = String.format(sqlMethod.getSql(), sqlSelectColumns(table), table.getTableName(), exampleWhereClause() ,exampleOrderByClause() );
+        String sql = String.format(sqlMethod.getSql(), sqlSelectColumns(table), table.getTableName(), exampleWhereClause() ,exampleOrderByClause() ,exampleLimit()  );
         SqlSource sqlSource = languageDriver.createSqlSource(configuration, sql, modelClass);
         this.addMappedStatement(mapperClass, sqlMethod, sqlSource, SqlCommandType.SELECT, modelClass);
     }
@@ -494,6 +494,12 @@ public class AutoSqlInjector {
     public String exampleOrderByClause() {
         return "<if test=\"ex != null\">" +
                 "<if test=\"ex.orderByClause!=null\">\n order by ${ex.orderByClause}\n</if>" +
+                "</if>";
+    }
+
+    public String exampleLimit() {
+        return "<if test=\"ex != null\">" +
+                "<if test=\"ex.limit!=null\">\n limit ${ex.limit}\n</if>" +
                 "</if>";
     }
 

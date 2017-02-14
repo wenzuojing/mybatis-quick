@@ -35,6 +35,8 @@ public class Example<T> {
 
     protected OrderBy ORDERBY;
 
+    protected Integer limit ;
+
     /**
      * 默认exists为true
      *
@@ -85,6 +87,14 @@ public class Example<T> {
     public OrderBy orderBy(String property) {
         this.ORDERBY.orderBy(property);
         return this.ORDERBY;
+    }
+
+    public void limit(Integer limit ){
+        this.limit = limit ;
+    }
+
+    public Integer getLimit() {
+        return limit;
     }
 
     public Set<String> getSelectColumns() {
