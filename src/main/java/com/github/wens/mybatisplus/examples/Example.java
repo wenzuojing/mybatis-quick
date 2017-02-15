@@ -407,58 +407,6 @@ public class Example<T> {
             return (Criteria) this;
         }
 
-        /**
-         * 手写左边条件，右边用value值
-         *
-         * @param condition   例如 "length(countryname)="
-         * @param value       例如 5
-         * @param typeHandler 类型处理
-         * @return
-         * @deprecated 由于typeHandler起不到作用，该方法会在4.x版本去掉
-         */
-        @Deprecated
-        public Criteria andCondition(String condition, Object value, String typeHandler) {
-            criteria.add(new Criterion(condition, value, typeHandler));
-            return (Criteria) this;
-        }
-
-        /**
-         * 手写左边条件，右边用value值
-         *
-         * @param condition   例如 "length(countryname)="
-         * @param value       例如 5
-         * @param typeHandler 类型处理
-         * @return
-         * @deprecated 由于typeHandler起不到作用，该方法会在4.x版本去掉
-         */
-        @Deprecated
-        public Criteria andCondition(String condition, Object value, Class<? extends TypeHandler> typeHandler) {
-            criteria.add(new Criterion(condition, value, typeHandler.getCanonicalName()));
-            return (Criteria) this;
-        }
-
-        /**
-         * 将此对象的不为空的字段参数作为相等查询条件
-         *
-         * @param param 参数对象
-         * @author Bob {@link}0haizhu0@gmail.com
-         * @Date 2015年7月17日 下午12:48:08
-         */
-        public Criteria andEqualTo(Object param) {
-            MetaObject metaObject = SystemMetaObject.forObject(param);
-            String[] properties = metaObject.getGetterNames();
-            for (String property : properties) {
-                String column = table.getColumn(property);
-                if (column != null) {
-                    Object value = metaObject.getValue(property);
-                    //属性值不为空
-                    if (value != null) {
-                        andEqualTo(property, value);
-                    }
-                }
-            }
-            return (Criteria) this;
-        }
     }
 
     public static class Criteria extends GeneratedCriteria {
