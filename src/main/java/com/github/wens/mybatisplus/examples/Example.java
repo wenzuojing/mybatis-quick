@@ -2,6 +2,7 @@ package com.github.wens.mybatisplus.examples;
 
 
 import com.github.wens.mybatisplus.toolkit.StringUtil;
+import com.github.wens.mybatisplus.toolkit.TableFieldInfo;
 import com.github.wens.mybatisplus.toolkit.TableInfo;
 import com.github.wens.mybatisplus.toolkit.TableInfoHelper;
 import org.apache.ibatis.reflection.MetaObject;
@@ -9,6 +10,7 @@ import org.apache.ibatis.reflection.SystemMetaObject;
 import org.apache.ibatis.type.TypeHandler;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 通用的Example查询对象
@@ -16,6 +18,8 @@ import java.util.*;
  * @author liuzh
  */
 public class Example<T> {
+
+    private static Map<String,String> allSelectColumnCache = new ConcurrentHashMap<>();
 
     protected String orderByClause;
 
@@ -97,8 +101,57 @@ public class Example<T> {
         return limit;
     }
 
-    public Set<String> getSelectColumns() {
-        return selectColumns;
+    public String getSelectColumns() {
+
+
+        if(this.selectColumns == null ){
+
+
+
+            return selectAllColumn(table);
+
+
+        }else {
+            StringBuilder columns = new StringBuilder();
+            boolean isFirst = true ;
+            for(String column : selectColumns ){
+
+                if(!isFirst){
+                    columns.append(",") ;
+                }else{
+                    isFirst = false ;
+                }
+
+                columns.append(column).append(" AS ").append(table.getProperty(column));
+            }
+            return  columns.toString() ;
+        }
+
+
+    }
+
+    private String selectAllColumn(TableInfo table) {
+        String s = allSelectColumnCache.get(table.getTableName());
+        if(s != null ){
+            return s ;
+        }
+
+        StringBuilder columns = new StringBuilder();
+        if (table.isKeyRelated()) {
+            columns.append(table.getKeyColumn()).append(" AS ").append(table.getKeyProperty());
+        } else {
+            columns.append(table.getKeyProperty());
+        }
+        List<TableFieldInfo> fieldList = table.getFieldList();
+        for (TableFieldInfo fieldInfo : fieldList) {
+            columns.append(",").append(fieldInfo.getColumn());
+            if (fieldInfo.isRelated()) {
+                columns.append(" AS ").append(fieldInfo.getProperty());
+            }
+        }
+        s  = columns.toString() ;
+        allSelectColumnCache.put(table.getTableName(),s );
+        return s ;
     }
 
     /**
@@ -110,7 +163,7 @@ public class Example<T> {
     public Example selectProperties(String... properties) {
         if (properties != null && properties.length > 0) {
             if (this.selectColumns == null) {
-                this.selectColumns = new LinkedHashSet<String>();
+                this.selectColumns = new HashSet<>();
             }
             for (String property : properties) {
                 String column = table.getColumn(property);

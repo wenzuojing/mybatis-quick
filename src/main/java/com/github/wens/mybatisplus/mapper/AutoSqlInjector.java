@@ -419,20 +419,8 @@ public class AutoSqlInjector {
      * @return
      */
     private String sqlSelectColumns(TableInfo table) {
-        StringBuilder columns = new StringBuilder();
-        if (table.isKeyRelated()) {
-            columns.append(table.getKeyColumn()).append(" AS ").append(table.getKeyProperty());
-        } else {
-            columns.append(table.getKeyProperty());
-        }
-        List<TableFieldInfo> fieldList = table.getFieldList();
-        for (TableFieldInfo fieldInfo : fieldList) {
-            columns.append(",").append(fieldInfo.getColumn());
-            if (fieldInfo.isRelated()) {
-                columns.append(" AS ").append(fieldInfo.getProperty());
-            }
-        }
-        return columns.toString();
+
+        return " ${ex.selectColumns} ";
     }
 
     /**
