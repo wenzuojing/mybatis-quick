@@ -113,16 +113,15 @@ public class Example<T> {
 
         }else {
             StringBuilder columns = new StringBuilder();
-            boolean isFirst = true ;
+
+            if (table.isKeyRelated()) {
+                columns.append(table.getKeyColumn()).append(" AS ").append(table.getKeyProperty());
+            } else {
+                columns.append(table.getKeyProperty());
+            }
+
             for(String column : selectColumns ){
-
-                if(!isFirst){
-                    columns.append(",") ;
-                }else{
-                    isFirst = false ;
-                }
-
-                columns.append(column).append(" AS ").append(table.getProperty(column));
+                columns.append(",").append(column).append(" AS ").append(table.getProperty(column));
             }
             return  columns.toString() ;
         }
@@ -167,7 +166,7 @@ public class Example<T> {
             }
             for (String property : properties) {
                 String column = table.getColumn(property);
-                if (column != null) {
+                if ( column != null && !table.getKeyColumn().equals(column)) {
                     this.selectColumns.add(column);
                 }
             }

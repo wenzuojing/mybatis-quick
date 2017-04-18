@@ -330,9 +330,9 @@ public class AutoSqlInjector {
             ids.append("#{item}");
             ids.append("\n</foreach>");
             sqlSource = languageDriver.createSqlSource(configuration, String.format(sqlMethod.getSql(),
-                    sqlSelectColumns(table), table.getTableName(), table.getKeyColumn(), ids.toString()), modelClass);
+                    sqlAllSelectColumns(table), table.getTableName(), table.getKeyColumn(), ids.toString()), modelClass);
         } else {
-            sqlSource = new RawSqlSource(configuration, String.format(sqlMethod.getSql(), sqlSelectColumns(table),
+            sqlSource = new RawSqlSource(configuration, String.format(sqlMethod.getSql(), sqlAllSelectColumns(table),
                     table.getTableName(), table.getKeyColumn(), table.getKeyProperty()), Object.class);
         }
         this.addMappedStatement(mapperClass, sqlMethod, sqlSource, SqlCommandType.SELECT, modelClass);
@@ -419,8 +419,24 @@ public class AutoSqlInjector {
      * @return
      */
     private String sqlSelectColumns(TableInfo table) {
-
         return " ${ex.selectColumns} ";
+    }
+
+    private String sqlAllSelectColumns(TableInfo table) {
+        StringBuilder columns = new StringBuilder();
+        if (table.isKeyRelated()) {
+            columns.append(table.getKeyColumn()).append(" AS ").append(table.getKeyProperty());
+        } else {
+            columns.append(table.getKeyProperty());
+        }
+        List<TableFieldInfo> fieldList = table.getFieldList();
+        for (TableFieldInfo fieldInfo : fieldList) {
+            columns.append(",").append(fieldInfo.getColumn());
+            if (fieldInfo.isRelated()) {
+                columns.append(" AS ").append(fieldInfo.getProperty());
+            }
+        }
+        return columns.toString();
     }
 
     /**

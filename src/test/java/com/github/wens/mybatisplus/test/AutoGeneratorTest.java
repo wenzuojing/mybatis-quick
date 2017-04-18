@@ -40,15 +40,14 @@ public class AutoGeneratorTest {
      */
     public static void main(String[] args) {
         ConfigGenerator cg = new ConfigGenerator();
-
-        cg.setEntityPackage("com.zy.ykt.entity");//entity 实体包路径
-        cg.setMapperPackage("com.zy.ykt.mapper");//mapper 映射文件路径
-        cg.setServicePackage("com.zy.ykt.service");//service 层路径
+        cg.setEntityPackage("com.yuyou.fn.educational.entity");//entity 实体包路径
+        cg.setMapperPackage("com.yuyou.fn.educational.mapper");//mapper 映射文件路径
+        cg.setServicePackage("com.yuyou.fn.educational.service");//service 层路径
 
 		/* 此处可以配置 SuperServiceImpl 子类路径，默认如下 */
         //cg.setSuperServiceImpl("com.baomidou.framework.service.impl.SuperServiceImpl");
 
-        cg.setSaveDir("/home/wens/dev/mybatis-quick/code");// 生成文件保存位置
+        cg.setSaveDir("/Users/wens/dev/mybatis-quick/code");// 生成文件保存位置
 
 		/*
          * 设置字段是否为驼峰命名，驼峰 true 下划线分割 false
@@ -57,9 +56,9 @@ public class AutoGeneratorTest {
 
 		/* 数据库相关配置 */
         cg.setDbDriverName("com.mysql.jdbc.Driver");
-        cg.setDbUser("zyapp");
-        cg.setDbPassword("123456");
-        cg.setDbUrl("jdbc:mysql://172.20.11.6:3306/ykt_db?useUnicode=true&characterEncoding=utf8");
+        cg.setDbUser("test");
+        cg.setDbPassword("yuyou2017");
+        cg.setDbUrl("jdbc:mysql://118.89.27.94:12420/yyfn?useUnicode=true&characterEncoding=utf8");
 
 		/*
 		 * 表主键 ID 生成类型, 自增该设置无效。
@@ -73,9 +72,12 @@ public class AutoGeneratorTest {
 
 
         List<String> tabls = new ArrayList<String>();
-        tabls.add("order_item");
 
-        //cg.setTables(tabls);
+
+        tabls.add("room_time");
+
+
+        cg.setTables(tabls);
 
 		/*
 		 * 表是否包括前缀
