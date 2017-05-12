@@ -21,6 +21,7 @@ import com.github.wens.mybatisplus.mapper.AutoMapper;
 import com.github.wens.mybatisplus.plugins.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -103,6 +104,9 @@ public class SuperServiceImpl<M extends AutoMapper<T, I>, T, I> implements ISupe
 
 
     public List<T> findByIds(List<I> idList) {
+        if(idList == null || idList.isEmpty() ){
+            return Collections.EMPTY_LIST ;
+        }
         return autoMapper.selectByIds(idList);
     }
 

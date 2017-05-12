@@ -38,7 +38,7 @@ public class AutoGeneratorTest {
      * 配置方法查看 {@link ConfigGenerator}
      * </p>
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {    
         ConfigGenerator cg = new ConfigGenerator();
         cg.setEntityPackage("com.yuyou.fn.educational.entity");//entity 实体包路径
         cg.setMapperPackage("com.yuyou.fn.educational.mapper");//mapper 映射文件路径
@@ -74,7 +74,8 @@ public class AutoGeneratorTest {
         List<String> tabls = new ArrayList<String>();
 
 
-        tabls.add("room_time");
+        tabls.add("teacher_continue_class_stat");
+ 
 
 
         cg.setTables(tabls);
