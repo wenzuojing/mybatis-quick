@@ -58,7 +58,7 @@ public class AutoGeneratorTest {
         cg.setDbDriverName("com.mysql.jdbc.Driver");
         cg.setDbUser("test");
         cg.setDbPassword("yuyou2017");
-        cg.setDbUrl("jdbc:mysql://118.89.27.94:12420/yyfn?useUnicode=true&characterEncoding=utf8");
+        cg.setDbUrl("jdbc:mysql://118.89.27.66:12420/yyfn?useUnicode=true&characterEncoding=utf8");
 
 		/*
 		 * 表主键 ID 生成类型, 自增该设置无效。
