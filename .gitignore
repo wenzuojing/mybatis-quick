@@ -1,3 +1,5 @@
 code
 target
 .idea
+
+src/test/java/com/github/wens/mybatisplus/test/*
