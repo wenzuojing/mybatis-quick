@@ -407,12 +407,19 @@ public class Example<T> {
         }
 
         public Criteria andIn(String property, Collection<?> values) {
-            addCriterion(column(property) + " in", values, property(property));
+            if(values == null || values.isEmpty() ){
+                addCriterion("1 <> 1");
+            }else{
+                addCriterion(column(property) + " in", values, property(property));
+            }
+
             return (Criteria) this;
         }
 
         public Criteria andNotIn(String property, Collection<?> values) {
-            addCriterion(column(property) + " not in", values, property(property));
+            if(values != null && !values.isEmpty() ){
+                addCriterion(column(property) + " not in", values, property(property));
+            }
             return (Criteria) this;
         }
 
