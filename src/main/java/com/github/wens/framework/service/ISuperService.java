@@ -147,6 +147,17 @@ public interface ISuperService<T, I> {
      */
     T findById(I id);
 
+    /**
+     * <p>
+     * 根据 ID 查询
+     * </p>
+     *
+     * @param id 主键ID
+     * @param selectProps 提取的属性
+     * @return T
+     */
+    T findById(I id,String ... selectProps);
+
 
     /**
      * <p>
@@ -157,6 +168,17 @@ public interface ISuperService<T, I> {
      * @return List<T>
      */
     List<T> findByIds(List<I> idList);
+
+    /**
+     * <p>
+     * 查询（根据ID 批量查询）
+     * @param selectProps 提取的属性
+     * </p>
+     *
+     * @param idList 主键ID列表
+     * @return List<T>
+     */
+    List<T> findByIds(List<I> idList,String ... selectProps);
 
 
     /**

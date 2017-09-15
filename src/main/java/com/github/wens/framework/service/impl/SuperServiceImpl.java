@@ -19,8 +19,13 @@ import com.github.wens.framework.service.ISuperService;
 import com.github.wens.mybatisplus.examples.Example;
 import com.github.wens.mybatisplus.mapper.AutoMapper;
 import com.github.wens.mybatisplus.plugins.Page;
+import com.github.wens.mybatisplus.toolkit.TableInfo;
+import com.github.wens.mybatisplus.toolkit.TableInfoHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.PostConstruct;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.Collections;
 import java.util.List;
 
@@ -34,8 +39,21 @@ import java.util.List;
  */
 public class SuperServiceImpl<M extends AutoMapper<T, I>, T, I> implements ISuperService<T, I> {
 
+    protected Class<T> entityClass;
+
+    protected TableInfo table;
+
     @Autowired
     protected M autoMapper;
+
+    public   SuperServiceImpl(){
+        Type type = this.getClass().getGenericSuperclass();
+        if(type instanceof ParameterizedType && ((ParameterizedType) type).getRawType().equals(SuperServiceImpl.class) ){
+            Type[] parameters = ((ParameterizedType) type).getActualTypeArguments();
+            entityClass  = (Class<T>) parameters[1];
+            table = TableInfoHelper.getTableInfo(entityClass);
+        }
+    }
 
 
     /**
@@ -102,12 +120,33 @@ public class SuperServiceImpl<M extends AutoMapper<T, I>, T, I> implements ISupe
         return autoMapper.selectById(id);
     }
 
+    @Override
+    public T findById(I id, String... selectProps) {
+        if(selectProps == null || selectProps.length == 0 ){
+            return findById(id);
+        }
+        Example<T> example = new Example<T>(this.entityClass);
+        example.selectProperties(selectProps);
+        example.createCriteria().andEqualTo(table.getKeyProperty(),id );
+        return findOneByExample(example);
+    }
 
     public List<T> findByIds(List<I> idList) {
         if(idList == null || idList.isEmpty() ){
             return Collections.EMPTY_LIST ;
         }
         return autoMapper.selectByIds(idList);
+    }
+
+    @Override
+    public List<T> findByIds(List<I> idList, String... selectProps) {
+        if(selectProps == null || selectProps.length == 0 ){
+            return findByIds(idList);
+        }
+        Example<T> example = new Example<T>(this.entityClass);
+        example.selectProperties(selectProps);
+        example.createCriteria().andIn(table.getKeyProperty(),idList );
+        return findListByExample(example);
     }
 
     @Override
