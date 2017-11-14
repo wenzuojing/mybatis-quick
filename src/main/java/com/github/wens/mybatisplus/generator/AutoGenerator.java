@@ -549,7 +549,7 @@ public class AutoGenerator {
     private String getIdType(Map<String, IdInfo> idMap) {
         IdInfo[] ids = idMap.values().toArray(new IdInfo[idMap.size()]);
         if (ids.length == 0) {
-            throw new RuntimeException("Can't find id field from table:");
+            return "String" ;
         }
         String type = ids[0].fieldInfo.type;
 

@@ -349,7 +349,7 @@ public class AutoSqlInjector {
      */
     private void injectSelectOneByExample(Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
         SqlMethod sqlMethod = SqlMethod.SELECT_ONE_BY_EXAMPLE;
-        String sql = String.format(sqlMethod.getSql(), sqlSelectColumns(table), table.getTableName(), exampleWhereClause());
+        String sql = String.format(sqlMethod.getSql(), sqlSelectColumns(table), table.getTableName() , exampleWhereClause() ,exampleOrderByClause() );
         SqlSource sqlSource = languageDriver.createSqlSource(configuration, sql, modelClass);
         this.addMappedStatement(mapperClass, sqlMethod, sqlSource, SqlCommandType.SELECT, modelClass);
     }
