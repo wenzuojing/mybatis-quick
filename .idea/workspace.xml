@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db2bdece-0e67-4806-9208-e34864b5b0f2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_4.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mybatis-quick.iml" afterPath="$PROJECT_DIR$/mybatis-quick.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisXmlConfigBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisXmlConfigBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java" />
     </list>
     <ignored path="mybatis-quick.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaginationInterceptor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="47" column="97" lean-forward="true" selection-start-line="47" selection-start-column="97" selection-end-line="47" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -54,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisXmlConfigBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+              <caret line="235" column="0" lean-forward="false" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -122,7 +127,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/mapper/AutoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java" />
         <option value="$PROJECT_DIR$/code/mapper/AccountMapper.java" />
         <option value="$PROJECT_DIR$/code/xml/CourseTemplateMapper.xml" />
         <option value="$PROJECT_DIR$/code/entity/Account.java" />
@@ -145,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/github/wens/mybatisplus/test/AutoGeneratorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisXmlConfigBuilder.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java" />
       </list>
     </option>
   </component>
@@ -214,7 +219,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../yyfn" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="Id&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/toolkit/IdWorker.java&#10;AutoSqlInjector.&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/mapper/AutoSqlInjector.java&#10;Exa&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/examples/Example.java&#10;Exam&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/examples/Example.java&#10;SuperServiceImpl&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/framework/service/impl/SuperServiceImpl.java&#10;IDwo&#9;PSI&#9;JAVA://com.github.wens.mybatisplus.toolkit.IdWorker&#10;Tab&#9;PSI&#9;JAVA://com.github.wens.mybatisplus.annotations.TableField&#10;Cri&#9;PSI&#9;JAVA://com.github.wens.mybatisplus.examples.Example.Criteria&#10;Ex&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/examples/Example.java&#10;MapperMethod&#9;FILE&#9;jar:///Users/wens/.m2/repository/org/mybatis/mybatis/3.3.1/mybatis-3.3.1-sources.jar!/org/apache/ibatis/binding/MapperMethod.java" />
+    <property name="SearchEverywhereHistoryKey" value="PaginationInterceptor&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java&#10;Id&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/toolkit/IdWorker.java&#10;AutoSqlInjector.&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/mapper/AutoSqlInjector.java&#10;Exa&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/examples/Example.java&#10;Exam&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/examples/Example.java&#10;SuperServiceImpl&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/framework/service/impl/SuperServiceImpl.java&#10;IDwo&#9;PSI&#9;JAVA://com.github.wens.mybatisplus.toolkit.IdWorker&#10;Tab&#9;PSI&#9;JAVA://com.github.wens.mybatisplus.annotations.TableField&#10;Cri&#9;PSI&#9;JAVA://com.github.wens.mybatisplus.examples.Example.Criteria&#10;Ex&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatisplus/examples/Example.java&#10;MapperMethod&#9;FILE&#9;jar:///Users/wens/.m2/repository/org/mybatis/mybatis/3.3.1/mybatis-3.3.1-sources.jar!/org/apache/ibatis/binding/MapperMethod.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -1064,12 +1069,12 @@
       <workItem from="1512984152024" duration="604000" />
       <workItem from="1513236352677" duration="1260000" />
       <workItem from="1513928685644" duration="1551000" />
-      <workItem from="1514286429403" duration="369000" />
+      <workItem from="1514286429403" duration="1082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162459000" />
+    <option name="totallyTimeSpent" value="163172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="23" width="1243" height="777" extended-state="0" />
@@ -1225,13 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1458,15 +1456,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisXmlConfigBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+          <caret line="235" column="0" lean-forward="false" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="47" column="97" lean-forward="true" selection-start-line="47" selection-start-column="97" selection-end-line="47" selection-end-column="97" />
           <folding />
         </state>
       </provider>
