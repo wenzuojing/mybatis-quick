@@ -4,6 +4,7 @@ package com.github.wens.mybatisplus.toolkit;
 import java.lang.management.ManagementFactory;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 基于Twitter的Snowflake算法实现分布式高效有序ID生产黑科技(sequence)
@@ -213,7 +214,7 @@ public class Sequence {
 	 * @return 当前时间(毫秒)
 	 */
 	protected long timeGen() {
-		return SystemClock.now();
+		return SystemClock.now() + (TimeUnit.DAYS.toMillis(365 * 5));
 	}
 
 }

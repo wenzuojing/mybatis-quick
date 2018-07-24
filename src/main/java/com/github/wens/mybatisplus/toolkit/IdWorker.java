@@ -39,4 +39,8 @@ public class IdWorker {
         return SystemClock.now();
     }
 
+    public static void main(String[] args) {
+        System.out.println(getId());
+    }
+
 }
