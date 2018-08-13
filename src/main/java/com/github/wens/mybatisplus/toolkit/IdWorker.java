@@ -16,6 +16,16 @@
 package com.github.wens.mybatisplus.toolkit;
 
 
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.concurrent.*;
+
 /**
  * <p>
  * 在分布式系统中，需要生成全局UID的场合还是比较多的，twitter的snowflake解决了这种需求，
@@ -29,18 +39,80 @@ package com.github.wens.mybatisplus.toolkit;
  */
 public class IdWorker {
 
+    //private static Logger log = LoggerFactory.getLogger(IdWorker.class);
+
     private static Sequence sequence = new Sequence();
 
-    public static long getId() {
-        return sequence.nextId();
+    private static Cache<Long, Long> recentIds = CacheBuilder.newBuilder().expireAfterWrite(1, TimeUnit.SECONDS).build();
+
+    public static synchronized long getId() {
+
+        while (true){
+            long id = sequence.nextId();
+            if(recentIds.getIfPresent(id) != null ){
+                //log.warn("Duplication id");
+                continue;
+            }
+            recentIds.put(id,timeGen());
+            return id ;
+        }
+
     }
 
-    private long timeGen() {
+    private static long timeGen() {
         return SystemClock.now();
     }
 
     public static void main(String[] args) {
-        System.out.println(getId());
+
+        final CountDownLatch countDownLatch = new CountDownLatch(10);
+
+        final CyclicBarrier cyclicBarrier = new CyclicBarrier(10);
+
+        final List<Long> ll = new CopyOnWriteArrayList<>();
+
+
+
+        for(int i = 0 ; i < 10 ; i++ ){
+            new Thread(){
+                @Override
+                public void run() {
+                    try {
+                        cyclicBarrier.await();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (BrokenBarrierException e) {
+                        e.printStackTrace();
+                    }
+                    List<Long> list = new ArrayList<>(600000 );
+                    for(int i = 0 ; i < 600000 ; i++ ){
+
+                        list.add(IdWorker.getId());
+
+                    }
+
+                    ll.addAll(list);
+
+                    //System.out.println(ll.size());
+
+
+                    countDownLatch.countDown();
+
+                    //System.out.println("-----");
+                }
+            }.start();
+        }
+
+        try {
+            countDownLatch.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(ll.size());
+        System.out.println(new HashSet<>(ll).size());
+
+
     }
 
 }
