@@ -6,27 +6,25 @@
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/zyapp?characterEncoding=UTF-8"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="123456"></property>
+        <property name="url" value="jdbc:mysql://118.89.27.94:12420/test_db"></property>
+        <property name="username" value="test"></property>
+        <property name="password" value="test@yuyou"></property>
         <property name="maxActive" value="100"></property>
         <property name="maxIdle" value="30"></property>
         <property name="maxWait" value="500"></property>
         <property name="defaultAutoCommit" value="true"></property>
     </bean>
 
-    <bean id="sqlSessionFactory" class="com.github.wens.mybatisplus.spring.MybatisSqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="com.github.wens.mybatis.spring.MybatisSqlSessionFactoryBean">
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <bean class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="mapperInterface" value="com.zy.app.mapper.TbUserMapper"></property>
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
-
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.github.wens.mapper" />
     </bean>
 
-    <context:component-scan base-package="com.zy.app.service.impl"/>
+    <context:component-scan base-package="com.github.wens.service.impl"/>
 
 </beans>
 
