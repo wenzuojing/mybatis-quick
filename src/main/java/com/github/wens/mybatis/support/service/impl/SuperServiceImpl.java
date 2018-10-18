@@ -1,12 +1,12 @@
 package com.github.wens.mybatis.support.service.impl;
 
+import com.github.wens.mybatis.TableInfo;
+import com.github.wens.mybatis.TableInfoHelper;
+import com.github.wens.mybatis.example.Example;
+import com.github.wens.mybatis.exception.MybatisQuickException;
+import com.github.wens.mybatis.support.Page;
 import com.github.wens.mybatis.support.mapper.CrudMapper;
 import com.github.wens.mybatis.support.service.ISuperService;
-import com.github.wens.mybatis.examples.Example;
-import com.github.wens.mybatis.exceptions.MybatisQuickException;
-import com.github.wens.mybatis.support.Page;
-import com.github.wens.mybatis.toolkit.TableInfo;
-import com.github.wens.mybatis.toolkit.TableInfoHelper;
 import com.google.common.collect.Lists;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

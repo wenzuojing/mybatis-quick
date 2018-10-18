@@ -1,24 +1,7 @@
-/**
- * Copyright (c) 2011-2014, hubin (jobob@qq.com).
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
 package com.github.wens.mybatis;
 
-import com.github.wens.mybatis.annotations.IdType;
-import com.github.wens.mybatis.toolkit.IdWorker;
-import com.github.wens.mybatis.toolkit.TableInfo;
-import com.github.wens.mybatis.toolkit.TableInfoHelper;
+import com.github.wens.mybatis.annotation.IdType;
+import com.github.wens.mybatis.idworker.IdWorker;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlCommandType;
@@ -28,55 +11,36 @@ import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 import java.util.*;
 
 /**
- * <p>
- * 自定义 ParameterHandler 重装构造函数，填充插入方法主键 ID
- * </p>
  *
- * @author hubin
- * @Date 2016-03-11
+ * @author wens
+ * @Date 2018-10-10
  */
 public class MybatisDefaultParameterHandler extends DefaultParameterHandler {
 
     public MybatisDefaultParameterHandler(MappedStatement mappedStatement, Object parameterObject, BoundSql boundSql) {
-        super(mappedStatement, processBatch(mappedStatement, parameterObject), boundSql);
+        super(mappedStatement, processParameterObject(mappedStatement, parameterObject), boundSql);
     }
 
-    /**
-     * <p>
-     * 批量（填充主键 ID）
-     * </p>
-     *
-     * @param ms
-     * @param parameterObject 插入数据库对象
-     * @return
-     */
-    protected static Object processBatch(MappedStatement ms, Object parameterObject) {
-        Collection<Object> parameters = getParameters(parameterObject);
+
+    protected static Object processParameterObject(MappedStatement ms, Object parameterObject) {
+        if(ms.getSqlCommandType() != SqlCommandType.INSERT){
+            return parameterObject ;
+        }
+
+        Collection<Object> parameters = getCollectionFromParameters(parameterObject);
         if (parameters != null) {
-            List<Object> objList = new ArrayList<Object>();
+            List<Object> list = new ArrayList<>(parameters.size());
             for (Object parameter : parameters) {
-                objList.add(populateKeys(ms, parameter));
+                list.add(trySetKeyValue(ms, parameter));
             }
-            return objList;
+            return list;
         } else {
-            return populateKeys(ms, parameterObject);
+            return trySetKeyValue(ms, parameterObject);
         }
     }
 
-    /**
-     * <p>
-     * 处理正常批量插入逻辑
-     * </p>
-     * <p>
-     * org.apache.ibatis.session.defaults.DefaultSqlSession$StrictMap 该类方法
-     * wrapCollection 实现 StrictMap 封装逻辑
-     * </p>
-     *
-     * @param parameter 插入数据库对象
-     * @return
-     */
-    @SuppressWarnings({"rawtypes", "unchecked"})
-    protected static Collection<Object> getParameters(Object parameter) {
+
+    protected static Collection<Object> getCollectionFromParameters(Object parameter) {
         Collection<Object> parameters = null;
         if (parameter instanceof Collection) {
             parameters = (Collection) parameter;
@@ -93,35 +57,25 @@ public class MybatisDefaultParameterHandler extends DefaultParameterHandler {
         return parameters;
     }
 
-    /**
-     * <p>
-     * 填充主键 ID
-     * </p>
-     *
-     * @param ms
-     * @param parameterObject 插入数据库对象
-     * @return
-     */
-    protected static Object populateKeys(MappedStatement ms, Object parameterObject) {
-        if (ms.getSqlCommandType() == SqlCommandType.INSERT) {
-            TableInfo tableInfo = TableInfoHelper.getTableInfo(parameterObject.getClass());
-            if (tableInfo != null && tableInfo.getIdType() == IdType.ID_WORKER) {
-                MetaObject metaParam = ms.getConfiguration().newMetaObject(parameterObject);
-                Object idValue = metaParam.getValue(tableInfo.getKeyProperty());
-                if (idValue == null) {
-                    /* 自定义 ID */
-                    Class<?> idType = metaParam.getGetterType(tableInfo.getKeyProperty());
-                    if (idType.isAssignableFrom(String.class)) {
-                        idValue = String.valueOf(IdWorker.getId());
-                    } else {
-                        idValue = IdWorker.getId();
-                    }
-                    metaParam.setValue(tableInfo.getKeyProperty(), idValue);
+
+    protected static Object trySetKeyValue(MappedStatement ms, Object parameterObject) {
+        TableInfo tableInfo = TableInfoHelper.getTableInfo(parameterObject.getClass());
+        if (tableInfo != null && tableInfo.getIdType() == IdType.ID_WORKER) {
+            MetaObject metaParam = ms.getConfiguration().newMetaObject(parameterObject);
+            Object value = metaParam.getValue(tableInfo.getKeyProperty());
+            if (value == null) {
+                Class<?> idType = metaParam.getGetterType(tableInfo.getKeyProperty());
+                if (idType.isAssignableFrom(String.class)) {
+                    value = String.valueOf(IdWorker.getId());
+                } else {
+                    value = IdWorker.getId();
                 }
-                return metaParam.getOriginalObject();
+                metaParam.setValue(tableInfo.getKeyProperty(), value);
             }
+            return metaParam.getOriginalObject();
+        }else{
+            return parameterObject;
         }
-        return parameterObject;
     }
 
 }

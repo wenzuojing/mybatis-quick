@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 import java.math.BigDecimal;
 
-import com.github.wens.mybatis.annotations.Field;
-import com.github.wens.mybatis.annotations.Id;
-import com.github.wens.mybatis.annotations.Table;
+import com.github.wens.mybatis.annotation.Field;
+import com.github.wens.mybatis.annotation.Id;
+import com.github.wens.mybatis.annotation.Table;
 
 /**
  *

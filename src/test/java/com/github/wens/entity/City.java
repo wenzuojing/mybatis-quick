@@ -2,8 +2,8 @@ package com.github.wens.entity;
 
 import java.io.Serializable;
 
-import com.github.wens.mybatis.annotations.Id;
-import com.github.wens.mybatis.annotations.Table;
+import com.github.wens.mybatis.annotation.Id;
+import com.github.wens.mybatis.annotation.Table;
 
 /**
  *

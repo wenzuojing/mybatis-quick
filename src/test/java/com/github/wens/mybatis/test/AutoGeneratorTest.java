@@ -15,9 +15,9 @@
  */
 package com.github.wens.mybatis.test;
 
-import com.github.wens.mybatis.annotations.IdType;
-import com.github.wens.mybatis.generator.AutoGenerator;
-import com.github.wens.mybatis.generator.ConfigGenerator;
+import com.github.wens.mybatis.annotation.IdType;
+import com.github.wens.mybatis.generator.MyBatisGenerator;
+import com.github.wens.mybatis.generator.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,15 +33,15 @@ import java.util.List;
 public class AutoGeneratorTest {
 
     /**
-     * 测试 run 执行
+     * 测试 generate 执行
      * <p>
-     * 配置方法查看 {@link ConfigGenerator}
+     * 配置方法查看 {@link Configuration}
      * </p>
      */
     public static void main(String[] args) {    
-        ConfigGenerator cg = new ConfigGenerator();
+        Configuration cg = new Configuration();
         cg.setEntityPackage("com.github.wens.entity");//entity 实体包路径
-        cg.setMapperPackage("com.github.wens.mapper");//mapper 映射文件路径
+        cg.setMapperPackage("com.github.wens.binding");//binding 映射文件路径
         cg.setServicePackage("com.github.wens.service");//service 层路径
 
 		/* 此处可以配置 SuperServiceImpl 子类路径，默认如下 */
@@ -70,31 +70,8 @@ public class AutoGeneratorTest {
 		 */
         cg.setIdType(IdType.ID_WORKER);
 
-
-        List<String> tabls = new ArrayList<String>();
-
-        tabls.add("external_measure_score");
-/*        tabls.add("crm_market_import");
-        tabls.add("crm_customer_resource");
-        tabls.add("crm_visit");*/
-        //tabls.add("crm_visit_detail");
-        /*tabls.add("crm_from_category");
-        tabls.add("crm_work_setup_template");
-        tabls.add("crm_work_setup_of_campus");
-        tabls.add("crm_visit_monitor");*/
-
-
-
-        //cg.setTables(tabls);
-
-		/*
-		 * 表是否包括前缀
-		 * <p>
-		 * 例如 mp_user 生成实体类 false 为 MpUser , true 为 User
-		 * </p>
-		 */
         cg.setDbPrefix(false);
-        AutoGenerator.run(cg);
+        new MyBatisGenerator(cg).generate();
     }
 
 }

@@ -23,7 +23,7 @@
 <!-- MyBatis SqlSessionFactoryBean 配置 -->
 <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
 	<property name="dataSource" ref="dataSource" />
-	<property name="configLocation" value="classpath:xml/mybatis-config.xml" />
+	<property name="configLocation" value="classpath:xml/mybatis-configuration.xml" />
 	<property name="typeAliasesPackage" value="xxx.entity" />
 	<property name="mapperLocations" value="classpath:com/xx/mapper/xml/*Mapper.xml" />
     <property name="plugins">
@@ -43,11 +43,11 @@
 ```
 
 
-> mybatis-config.xml
+> mybatis-configuration.xml
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-configuration.dtd">
 <configuration>
     <!-- 
      | 全局配置设置

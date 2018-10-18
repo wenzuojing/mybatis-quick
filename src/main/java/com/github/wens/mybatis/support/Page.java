@@ -1,6 +1,6 @@
 package com.github.wens.mybatis.support;
 
-import com.github.wens.mybatis.plugins.pagination.Pagination;
+import com.github.wens.mybatis.plugin.pagination.Pagination;
 
 import java.util.Collections;
 import java.util.List;

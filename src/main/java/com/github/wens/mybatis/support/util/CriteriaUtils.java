@@ -1,9 +1,9 @@
 package com.github.wens.mybatis.support.util;
 
 
-import com.github.wens.mybatis.examples.Example;
-import com.github.wens.mybatis.exceptions.MybatisQuickException;
-import com.github.wens.mybatis.support.annotations.*;
+import com.github.wens.mybatis.example.Example;
+import com.github.wens.mybatis.exception.MybatisQuickException;
+import com.github.wens.mybatis.support.annotation.*;
 import org.springframework.util.StringUtils;
 
 import java.lang.annotation.Annotation;

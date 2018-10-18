@@ -1,8 +1,7 @@
 package org.apache.ibatis.session;
 
-import com.github.wens.mybatis.mapper.AutoSqlInjector;
-import com.github.wens.mybatis.mapper.InjectCrudMappedStatement;
-import com.github.wens.mybatis.plugins.PaginationInterceptor;
+import com.github.wens.mybatis.binding.CrudMappedStatementBinding;
+import com.github.wens.mybatis.plugin.PaginationInterceptor;
 import com.github.wens.mybatis.support.mapper.CrudMapper;
 import org.apache.ibatis.binding.MapperRegistry;
 import org.apache.ibatis.builder.CacheRefResolver;
@@ -27,7 +26,6 @@ import org.apache.ibatis.reflection.factory.ObjectFactory;
 import org.apache.ibatis.reflection.wrapper.ObjectWrapperFactory;
 import org.apache.ibatis.scripting.LanguageDriver;
 import org.apache.ibatis.scripting.LanguageDriverRegistry;
-import org.apache.ibatis.session.*;
 import org.apache.ibatis.transaction.Transaction;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.TypeAliasRegistry;
@@ -46,13 +44,13 @@ public class DelegateConfiguration extends Configuration{
     
     private Configuration configuration;
 
-    private InjectCrudMappedStatement injectCrudMappedStatement;
+    private CrudMappedStatementBinding injectCrudMappedStatement;
 
     
 
     public DelegateConfiguration(Configuration configuration) {
         this.configuration = configuration;
-        this.injectCrudMappedStatement = new InjectCrudMappedStatement(this.configuration);
+        this.injectCrudMappedStatement = new CrudMappedStatementBinding(this.configuration);
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
         paginationInterceptor.setDialectType("mysql");
         this.configuration.addInterceptor(paginationInterceptor);
