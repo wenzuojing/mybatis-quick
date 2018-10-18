@@ -1,7 +1,7 @@
 package com.github.wens.mybatis.support.service;
 
 import com.github.wens.mybatis.examples.Example;
-import com.github.wens.mybatis.plugins.Page;
+import com.github.wens.mybatis.support.Page;
 
 import java.util.List;
 

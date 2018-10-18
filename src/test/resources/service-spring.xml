@@ -15,13 +15,14 @@
         <property name="defaultAutoCommit" value="true"></property>
     </bean>
 
-    <bean id="sqlSessionFactory" class="com.github.wens.mybatis.spring.MybatisSqlSessionFactoryBean">
-        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
-        <property name="dataSource" ref="dataSource"/>
+    <bean id="sqlSessionFactoryBuilder" class="org.apache.ibatis.session.MybatisQuickSqlSessionFactoryBuilder">
     </bean>
-
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.github.wens.mapper" />
+        <property name="basePackage"  value="com.github.wens.mapper"/>
+    </bean>
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="sqlSessionFactoryBuilder" ref="sqlSessionFactoryBuilder"/>
     </bean>
 
     <context:component-scan base-package="com.github.wens.service.impl"/>

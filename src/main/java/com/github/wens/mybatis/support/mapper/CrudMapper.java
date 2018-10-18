@@ -1,7 +1,10 @@
 package com.github.wens.mybatis.support.mapper;
 
 import com.github.wens.mybatis.examples.Example;
+import com.github.wens.mybatis.lang.SelectById;
+import org.apache.ibatis.annotations.Lang;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;

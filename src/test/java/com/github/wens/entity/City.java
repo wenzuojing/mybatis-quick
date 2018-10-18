@@ -2,21 +2,19 @@ package com.github.wens.entity;
 
 import java.io.Serializable;
 
-import com.github.wens.mybatis.annotations.TableField;
-import com.github.wens.mybatis.annotations.TableId;
-import com.github.wens.mybatis.annotations.TableName;
-import com.github.wens.mybatis.examples.Example;
+import com.github.wens.mybatis.annotations.Id;
+import com.github.wens.mybatis.annotations.Table;
 
 /**
  *
  * 
  *
  */
-@TableName(value = "city")
+@Table(value = "city")
 public class City implements Serializable {
 
 	/**  */
-	@TableId
+	@Id
 	private Integer id;
 
 	/**  */
@@ -27,6 +25,10 @@ public class City implements Serializable {
 
 	/**  */
 	private String country;
+
+	public City(){
+		System.out.println("---------");
+	}
 
 	public Integer getId() {
 		return this.id;

@@ -15,11 +15,18 @@ import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlCommandType;
 import org.apache.ibatis.mapping.SqlSource;
 import org.apache.ibatis.mapping.StatementType;
+import org.apache.ibatis.scripting.xmltags.XMLLanguageDriver;
 import org.apache.ibatis.session.Configuration;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
+
+/**
+ *
+ * @author wens
+ * @Date 2018-10-10
+ */
 public class InjectCrudMappedStatement {
 
 
@@ -68,40 +75,44 @@ public class InjectCrudMappedStatement {
     }
 
     private void injectSelectPageByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectPageByExample","${ex.selectColumns}",exampleWhereClause());
+        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectPageByExample","${ex.selectColumns}",exampleWhereClause(),exampleOrderByClause(),"");
     }
 
     private void injectSelectListByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectPageByExample","${ex.selectColumns}",exampleWhereClause());
+        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectListByExample","${ex.selectColumns}",exampleWhereClause(),exampleWhereClause(),"");
     }
 
     private void injectSelectOneByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectOneByExample","${ex.selectColumns}",exampleWhereClause());
+        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectOneByExample","${ex.selectColumns}",exampleWhereClause(),exampleOrderByClause(),"limit 1");
     }
 
     private void injectSelectByIds(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectByIds","${ex.selectColumns}",table.getKeyColumn() +" IN (" + wrapForeach("#{item}","item","index" ,"ids",",") +")");
+        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectByIds",allSelectColumn(table),wrapWhere(table.getKeyColumn() +" IN (" + wrapForeach("#{item}","item","index" ,"ids",",") +")" ),"","");
+    }
+
+    private String allSelectColumn(TableInfo table) {
+        return table.getKeyColumn() +" AS " + table.getKeyProperty()+"," + Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> f.getColumn() + " AS " + f.getProperty()));
     }
 
     private void injectSelectById(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectPageByExample","${ex.selectColumns}",table.getKeyColumn() +" = #{id}");
+        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectById",allSelectColumn(table),wrapWhere( table.getKeyColumn() +" = #{id}" ),"","");
     }
 
     private void injectUpdateSelectiveByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        String setColumns = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getProperty() + "!=null\"> "+f.getColumn()+" = #{" + f.getProperty() + "}</if>"));
+        String setColumns = wrapTrim(Joiner.on("").join(Lists.transform(table.getFieldList(), f -> "<if test=\"et." + f.getProperty() + "!=null\"> "+f.getColumn()+" = #{et." + f.getProperty() + "},</if>")),"","",",");
         String where = exampleWhereClause();
         addUpdateMappedStatement(assistant, mapperClass, modelClass, table, "updateSelectiveByExample",setColumns, where);
     }
 
     private void injectUpdateSelectiveById(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        String setColumns = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getProperty() + "!=null\"> "+f.getColumn()+" = #{" + f.getProperty() + "}</if>"));
-        String where = wrapWhere(table.getKeyColumn() + " = #{ex.}" + table.getKeyProperty() );
-        addUpdateMappedStatement(assistant, mapperClass, modelClass, table, "updateSelectiveId",setColumns, where);
+        String setColumns = wrapTrim(Joiner.on("").join(Lists.transform(table.getFieldList(), f -> "<if test=\"et." + f.getProperty() + "!=null\"> "+f.getColumn()+" = #{et." + f.getProperty() + "},</if>")),"","",",");
+        String where = wrapWhere(table.getKeyColumn() + " = #{et."+table.getKeyProperty()+"}" );
+        addUpdateMappedStatement(assistant, mapperClass, modelClass, table, "updateSelectiveById",setColumns, where);
     }
 
     private void injectUpdateById(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        String setColumns = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> f.getColumn() + " = #{" + f.getProperty() + "}"));
-        String where = wrapWhere(table.getKeyColumn() + " = #{ex.}" + table.getKeyProperty() );
+        String setColumns = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> f.getColumn() + " = #{et." + f.getProperty() + "}"));
+        String where = wrapWhere(table.getKeyColumn() + " = #{et."+table.getKeyProperty()+"}"  );
         addUpdateMappedStatement(assistant, mapperClass, modelClass, table, "updateById",setColumns, where);
     }
 
@@ -128,10 +139,10 @@ public class InjectCrudMappedStatement {
     private void injectInsertBatch(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
 
         String columns = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> f.getColumn()));
-        String placeholders = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> "#{" + f.getProperty() + "}"));
+        String placeholders = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> "#{item." + f.getProperty() + "}"));
         if (table.getIdType() != IdType.AUTO) {
             columns = table.getKeyColumn() + "," + columns;
-            placeholders = "#{" + table.getKeyProperty() + "}," + placeholders;
+            placeholders = "#{item." + table.getKeyProperty() + "}," + placeholders;
         }
 
         columns = wrapTrim(columns, "(", ")", ",");
@@ -143,8 +154,8 @@ public class InjectCrudMappedStatement {
 
     private void injectInsertSelective(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
 
-        String columns = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getColumn() + "!=null\">" + f.getColumn() + "</if>"));
-        String placeholders = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getProperty() + "!=null\">#{" + f.getProperty() + "}</if>"));
+        String columns = Joiner.on("").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getColumn() + "!=null\">" + f.getColumn() + ",</if>"));
+        String placeholders = Joiner.on("").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getProperty() + "!=null\">#{" + f.getProperty() + "},</if>"));
         if (table.getIdType() != IdType.AUTO) {
             columns = table.getKeyColumn() + "," + columns;
             placeholders = "#{" + table.getKeyProperty() + "}," + placeholders;
@@ -161,8 +172,8 @@ public class InjectCrudMappedStatement {
         String columns = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> f.getColumn()));
         String placeholders = Joiner.on(",").join(Lists.transform(table.getFieldList(), f -> "#{" + f.getProperty() + "}"));
         if (table.getIdType() != IdType.AUTO) {
-            columns = table.getKeyColumn() + ",";
-            placeholders = "#{" + table.getKeyProperty() + "},";
+            columns = table.getKeyColumn() + "," + columns ;
+            placeholders = "#{" + table.getKeyProperty() + "}," + placeholders;
         }
 
         columns = wrapTrim(columns, "(", ")", ",");
@@ -170,9 +181,9 @@ public class InjectCrudMappedStatement {
         addInsertMappedStatement(assistant, mapperClass, modelClass, table, "insert", columns, placeholders);
     }
 
-    private MappedStatement addSelectMappedStatement(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table, String id,String selectColumns, String where) {
+    private MappedStatement addSelectMappedStatement(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table, String id,String selectColumns,String where , String order,String limit ) {
         StringBuilder sb = new StringBuilder(1000);
-        sb.append("SELECT ").append(selectColumns).append(" FROM ").append(table.getTableName()).append(" ").append(where);
+        sb.append("SELECT ").append(selectColumns).append(" FROM ").append(table.getTableName()).append(" ").append(where).append(" ").append(order).append(" ").append(limit);
         SqlSource sqlSource = configuration.getDefaultScriptingLanguageInstance().createSqlSource(configuration, wrapScript(sb.toString()), modelClass);
         return this.addMappedStatement(assistant, mapperClass, id, sqlSource, SqlCommandType.SELECT, modelClass, modelClass, new NoKeyGenerator(), null, null);
     }
@@ -193,7 +204,7 @@ public class InjectCrudMappedStatement {
 
     private MappedStatement addInsertMappedStatement(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table, String id, String columns, String placeholders) {
         StringBuilder sb = new StringBuilder(1000);
-        sb.append("INSERT INTO").append(" ").append(table.getTableName()).append(" ").append(columns).append(" VALUE ").append(placeholders);
+        sb.append("INSERT INTO").append(" ").append(table.getTableName()).append(" ").append(columns).append(" VALUES ").append(placeholders);
         SqlSource sqlSource = configuration.getDefaultScriptingLanguageInstance().createSqlSource(configuration, wrapScript(sb.toString()), modelClass);
         return this.addMappedStatement(assistant, mapperClass, id, sqlSource, SqlCommandType.INSERT, modelClass, null, table.getIdType() == IdType.AUTO ? new Jdbc3KeyGenerator() : new NoKeyGenerator(), table.getKeyProperty(), table.getKeyColumn());
     }
@@ -261,6 +272,12 @@ public class InjectCrudMappedStatement {
                 "    </if>\n" +
                 "  </foreach>\n" +
                 "</where>" +
+                "</if>";
+    }
+
+    public String exampleOrderByClause() {
+        return "<if test=\"ex != null\">" +
+                "<if test=\"ex.orderByClause!=null\">\n order by ${ex.orderByClause}\n</if>" +
                 "</if>";
     }
 

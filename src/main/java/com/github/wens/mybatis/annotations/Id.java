@@ -22,19 +22,25 @@ import java.lang.annotation.Target;
 
 /**
  * <p>
- * 数据库表名
+ * 表主键标识
  * </p>
  *
  * @author hubin
  * @Date 2016-01-23
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface TableName {
+@Target(ElementType.FIELD)
+public @interface Id {
 
     /**
-     * 表名
-     **/
+     * 字段值（驼峰命名方式，该值可无）
+     */
     String value() default "";
 
+    /**
+     * 主键ID，默认 ID 自增
+     * <p/>
+     * {@link IdType}
+     */
+    IdType type() default IdType.ID_WORKER;
 }

@@ -2,72 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01a7aea3-7eb2-4fde-aca9-c3289d4f9827" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/InjectCrudMappedStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/TestInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/Equal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/FullLike.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/GreatOrEqualThan.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/GreatThan.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/Ignore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/In.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/LeftLike.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/LessOrEqualThan.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/LessThan.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/RightLike.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/ISuperService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/impl/SuperServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/util/CriteriaUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/github/wens/TestMain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/github/wens/entity/MyCity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/github/wens/mybatis/test/AutoGeneratorTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/framework/service/ISuperService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/framework/service/impl/SuperServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/mapper/AutoMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/mapper/CommonMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/com/zy/app/mapper/TbUserMapper.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisConfiguration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisDefaultParameterHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisDefaultParameterHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisSessionFactoryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisSessionFactoryBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisXMLLanguageDriver.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXMLLanguageDriver.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/MybatisXmlConfigBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXmlConfigBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/annotations/IdType.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/annotations/IdType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/annotations/TableField.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/annotations/TableField.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/annotations/TableId.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/annotations/TableId.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/annotations/TableName.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/annotations/TableName.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/examples/Example.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/examples/Example.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/exceptions/MybatisPlusException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/exceptions/MybatisQuickException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/generator/AutoGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/generator/AutoGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/generator/ConfigGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/generator/ConfigGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/mapper/AutoSqlInjector.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/AutoSqlInjector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/mapper/BaseMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/CrudMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/mapper/SqlMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/SqlMethod.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/Page.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/Page.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/PaginationInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/PaginationInterceptor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/DialectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/DialectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/IDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/IDialect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/Pagination.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/Pagination.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/dialects/HSQLDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/dialects/HSQLDialect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/dialects/MySqlDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/dialects/MySqlDialect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/dialects/OracleDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/dialects/OracleDialect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/dialects/PostgreDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/dialects/PostgreDialect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/dialects/SQLServerDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/dialects/SQLServerDialect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/plugins/pagination/dialects/SQLiteDialect.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/dialects/SQLiteDialect.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/spring/MybatisSqlSessionFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/spring/MybatisSqlSessionFactoryBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/toolkit/IdWorker.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/IdWorker.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/toolkit/Sequence.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/Sequence.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/toolkit/StringUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/StringUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/toolkit/SystemClock.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/SystemClock.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/toolkit/TableFieldInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/TableFieldInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/toolkit/TableInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/TableInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatisplus/toolkit/TableInfoHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/TableInfoHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/lang/SelectById.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/spring/MybatisMapperScannerConfigurer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/DelegateConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/MybatisQuickSqlSessionFactoryBuilder.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisSessionFactoryBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/TestInterceptor.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/Page.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/Page.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mybatis-quick.iml" afterPath="$PROJECT_DIR$/mybatis-quick.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/jdbc.properties" afterPath="$PROJECT_DIR$/src/test/resources/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/InjectCrudMappedStatement.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/InjectCrudMappedStatement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/spring/MybatisSqlSessionFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/spring/MybatisSqlSessionFactoryBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/CrudMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/CrudMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/ISuperService.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/ISuperService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/impl/SuperServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/impl/SuperServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/github/wens/TestMain.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/wens/TestMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/github/wens/entity/City.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/wens/entity/City.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/github/wens/entity/MyCity.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/wens/entity/MyCity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/test/resources/mybatis-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/service-spring.xml" afterPath="$PROJECT_DIR$/src/test/resources/service-spring.xml" />
     </list>
@@ -80,129 +30,96 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SuperServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/impl/SuperServiceImpl.java">
+    <leaf>
+      <file leaf-file-name="MybatisDefaultParameterHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisDefaultParameterHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="85" column="7" lean-forward="false" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2267#2268#0" expanded="true" />
-                <element signature="e#2325#2326#0" expanded="true" />
+                <element signature="e#1926#1934#0" expanded="true" />
+                <element signature="e#2429#2473#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResultSetHandler.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/resultset/ResultSetHandler.class">
+      <file leaf-file-name="MybatisXmlConfigBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXmlConfigBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="17">
+              <caret line="109" column="52" lean-forward="true" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultResultSetHandler.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.class">
+      <file leaf-file-name="MybatisXMLLanguageDriver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXMLLanguageDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="199" column="9" lean-forward="true" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
+            <state relative-caret-position="221">
+              <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Executor.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/Executor.class">
+      <file leaf-file-name="XMLLanguageDriver.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/scripting/xmltags/XMLLanguageDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="182">
+              <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseExecutor.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/BaseExecutor.class">
+      <file leaf-file-name="DefaultParameterHandler.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/scripting/defaults/DefaultParameterHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="117" column="23" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
+            <state relative-caret-position="-89">
+              <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/TestMain.java">
+      <file leaf-file-name="AutoSqlInjector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/AutoSqlInjector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+            <state relative-caret-position="17">
+              <caret line="199" column="8" lean-forward="false" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Example.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/examples/Example.java">
+      <file leaf-file-name="MybatisQuickSqlSessionFactoryBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/MybatisQuickSqlSessionFactoryBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#544#545#0" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-                <marker date="1539584861676" expanded="false" signature="1057:1068" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="1092:1098" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="1318:1329" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="1362:1368" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="1959:1970" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="1989:1995" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="2033:2044" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="2065:2071" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="2127:2138" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="2173:2179" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="2340:2350" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="2370:2376" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="2407:2418" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="2431:2437" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="4644:4655" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="4671:4677" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="4724:4735" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="4760:4766" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="4811:4822" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="4842:4848" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="4887:4898" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="4925:4931" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="5609:5620" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="5648:5654" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="8757:8772" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="8799:8809" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="8858:8873" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="8889:8899" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="8945:8960" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="8976:8986" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="15107:15122" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="15151:15161" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="15679:15694" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="15711:15721" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="15755:15770" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="15783:15793" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="15833:15848" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="15867:15877" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="15913:15928" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="15943:15953" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="15993:16008" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="16027:16037" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="16078:16093" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="16113:16123" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="16161:16176" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="16193:16203" ph=" }" />
-                <marker date="1539584861676" expanded="false" signature="16243:16258" ph=" { " />
-                <marker date="1539584861676" expanded="false" signature="16277:16287" ph=" }" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InjectCrudMappedStatement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/InjectCrudMappedStatement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="221" column="77" lean-forward="false" selection-start-line="221" selection-start-column="77" selection-end-line="221" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/executor/keygen/KeyGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,30 +127,8 @@
       <file leaf-file-name="CrudMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/CrudMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISuperService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/ISuperService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-564">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaginationInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/PaginationInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="114" column="28" lean-forward="false" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="28" />
+            <state relative-caret-position="153">
+              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -248,25 +143,54 @@
       </list>
     </option>
   </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/** * Copyright (c) 2011-2014, hubin (jobob@qq.com). * &lt;p/&gt; * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not * use this file except in compliance with the License. You may obtain a copy of * the License at * &lt;p/&gt; * http://www.apache.org/licenses/LICENSE-2.0 * &lt;p/&gt; * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the * License for the specific language governing permissions and limitations under * the License. */</find>
-      <find>autoMapper</find>
+      <find>dialectType</find>
+      <find>MybatisXmlConfigBuilder</find>
+      <find>processBatch</find>
+      <find>configuration</find>
+      <find>configuration =</find>
+      <find>configLocation</find>
+      <find>createParameterHandler</find>
+      <find>languageDriver</find>
+      <find>sqlSessionFactoryBuilder</find>
+      <find>basePackage</find>
+      <find>MapperFactoryBean</find>
+      <find>do</find>
+      <find>doScan</find>
+      <find>mapperFactoryBean</find>
+      <find>get</find>
+      <find>addToConfig</find>
+      <find>sqlSessionFactory</find>
+      <find>setConfig</find>
+      <find>addMapper</find>
+      <find>super.</find>
+      <find>addMa</find>
       <find>selectColumns</find>
-      <find>notNull</find>
-      <find>is</find>
-      <find>exists</find>
-      <find>property</find>
-      <find>mybatisplus</find>
+      <find>---</find>
+      <find>addMapp</find>
+      <find>plugin</find>
+      <find>addselect</find>
+      <find>MybatisDefaultParameterHandler</find>
+      <find>MybatisXMLLanguageDriver</find>
+      <find>item</find>
+      <find>updateById</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>mapper</replace>
       <replace>mybatis</replace>
+      <replace>this.configuration.</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/java/com/github/wens/framework</dir>
+      <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/src/main/java/com/github/wens/mybatis</dir>
+      <dir>$PROJECT_DIR$/src/main/java/com/github/wens</dir>
+      <dir>$PROJECT_DIR$/src/main/java</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -301,18 +225,33 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/RightLike.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/annotations/In.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/util/CriteriaUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/generator/AutoGenerator.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/service-spring.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/github/wens/entity/MyCity.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/github/wens/TestMain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXmlConfigBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/AutoSqlInjector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/CrudMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/InjectCrudMappedStatement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/TestInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/examples/Example.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/wens/entity/City.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/MyCity.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/wens/entity/MyCity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/TestInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/impl/SuperServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/lang/SelectById.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/spring/MybatisSqlSessionFactoryBean.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/wens/TestMain2.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/wens/MyScan.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/spring/MybatisMapperScannerConfigurer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/CrudMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/DelegateConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisSessionFactoryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/MybatisSessionFactoryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/EnchanceSqlSessionFactoryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/MybatisQuickSqlSessionFactoryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXmlConfigBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/DelegateConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/service-spring.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/wens/TestMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/AutoSqlInjector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/InjectCrudMappedStatement.java" />
       </list>
     </option>
   </component>
@@ -336,11 +275,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="37" />
     <option name="y" value="23" />
-    <option name="width" value="1883" />
-    <option name="height" value="1057" />
+    <option name="width" value="1243" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -401,6 +340,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -470,11 +413,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="wens" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
@@ -482,11 +421,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="wens" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
@@ -494,11 +430,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="wens" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
+              <item name="ibatis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
@@ -506,54 +440,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="wens" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-quick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="wens" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-quick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="wens" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-quick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="wens" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="SuperServiceImpl" type="1a9f42e2:ClassTreeNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
+              <item name="ibatis" type="462c0819:PsiDirectoryNode" />
+              <item name="session" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
@@ -594,15 +484,33 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="github" type="462c0819:PsiDirectoryNode" />
               <item name="wens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-quick" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-tx:4.3.18.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="mybatis-quick" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-tx:4.3.18.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-tx-4.3.18.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -616,10 +524,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
-    <property name="SearchEverywhereHistoryKey" value="Exc&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/Executor.class&#10;ResultSetHandler&#9;PSI&#9;JAVA://org.apache.ibatis.executor.resultset.ResultSetHandler&#10;Executor&#9;PSI&#9;JAVA://org.apache.ibatis.executor.Executor" />
+    <property name="SearchEverywhereHistoryKey" value="De&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/org/apache/ibatis/session/DelegateConfiguration.java&#10;eXam&#9;PSI&#9;JAVA://com.github.wens.mybatis.examples.Example&#10;Config&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/session/Configuration.class&#10;Mapper&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar!/org/mybatis/spring/mapper/MapperFactoryBean.class&#10;MapperFactoryBean&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar!/org/mybatis/spring/mapper/MapperFactoryBean.class&#10;DefaultObje&#9;PSI&#9;JAVA://org.apache.ibatis.reflection.factory.DefaultObjectFactory&#10;SqlSessionFactoryBean&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar!/org/mybatis/spring/SqlSessionFactoryBean.class&#10;Auto&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatis/mapper/AutoSqlInjector.java&#10;MybatisDefaultParameterHandler&#9;PSI&#9;JAVA://com.github.wens.mybatis.MybatisDefaultParameterHandler&#10;IdWo&#9;PSI&#9;JAVA://com.github.wens.mybatis.toolkit.IdWorker&#10;DataSour&#9;PSI&#9;JAVA://javax.sql.DataSource&#10;Map&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/binding/MapperMethod.class&#10;MybatisDe&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/main/java/com/github/wens/mybatis/MybatisDefaultParameterHandler.java&#10;Paramhand&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/parameter/ParameterHandler.class&#10;Exc&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/Executor.class&#10;Re&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/resultset/ResultSetHandler.class&#10;Han&#9;FILE&#9;jar:///Volumes/sobig/maven_repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/resultset/ResultSetHandler.class&#10;Cit&#9;FILE&#9;file:///Users/wens/dev/mybatis-quick/src/test/java/com/github/wens/entity/City.java&#10;ResultSetHandler&#9;PSI&#9;JAVA://org.apache.ibatis.executor.resultset.ResultSetHandler&#10;Executor&#9;PSI&#9;JAVA://org.apache.ibatis.executor.Executor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.wens" />
       <recent name="com.github.wens.mybatis.support.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -783,45 +692,56 @@
       <updated>1539309190373</updated>
       <workItem from="1539309204574" duration="1453000" />
       <workItem from="1539310667221" duration="26548000" />
-      <workItem from="1539574429632" duration="2193000" />
+      <workItem from="1539574429632" duration="16745000" />
+      <workItem from="1539741823725" duration="33579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30194000" />
+    <option name="totallyTimeSpent" value="78325000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="23" width="1883" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694355" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40362087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.57294995" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2080391" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27477103" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3514377" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4227902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2513312" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3009234" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3109691" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4259851" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498642" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -833,24 +753,24 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498642" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27477103" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30670926" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36954206" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40362087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2080391" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4227902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2513312" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17762086" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3109691" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -865,129 +785,116 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXmlConfigBuilder.java</url>
-          <line>151</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/lang/SelectById.java</url>
+          <line>11</line>
           <properties />
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/BaseExecutor.class</url>
-          <line>118</line>
+          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/reflection/factory/DefaultObjectFactory.class</url>
+          <line>42</line>
           <properties />
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisConfiguration.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="85" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="112" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/lang/annotation/Target.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="85" column="10" lean-forward="true" selection-start-line="85" selection-start-column="10" selection-end-line="85" selection-end-column="10" />
+        <state relative-caret-position="121">
+          <caret line="115" column="24" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/lang/annotation/ElementType.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar!/org/mybatis/spring/mapper/ClassPathMapperScanner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="102" column="18" lean-forward="false" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/util/CriteriaUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/AutoMapper.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/mapping/MappedStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisSessionFactoryBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="-859">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/generator/AutoGenerator.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/binding/MapperRegistry.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="527" column="72" lean-forward="false" selection-start-line="527" selection-start-column="72" selection-end-line="527" selection-end-column="72" />
+        <state relative-caret-position="182">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#2233#2234#0" expanded="true" />
+            <element signature="e#2318#2319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/spring/MybatisSqlSessionFactoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/mybatis/test/AutoGeneratorTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/builder/BaseBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/builder/xml/XMLConfigBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="413" column="84" lean-forward="false" selection-start-line="413" selection-start-column="84" selection-end-line="413" selection-end-column="84" />
+          <folding>
+            <element signature="e#1877#1878#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
+            <element signature="e#2011#2012#0" expanded="true" />
+            <element signature="e#2078#2079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/builder/xml/XMLMapperBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/mapper/CityMapper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/session/Configuration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="-2430">
+          <caret line="579" column="24" lean-forward="false" selection-start-line="579" selection-start-column="16" selection-end-line="579" selection-end-column="24" />
+          <folding>
+            <element signature="e#26186#26187#0" expanded="true" />
+            <element signature="e#26245#26246#0" expanded="true" />
+            <element signature="e#26293#26294#0" expanded="true" />
+            <element signature="e#26344#26345#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/mapper/TestTbMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/service/ITestTbService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/service/ICityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/service/impl/CityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/service/impl/TestTbServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar!/com/mysql/jdbc/Util.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="261" column="0" lean-forward="false" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/mybatis-config.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/builder/BaseBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -995,315 +902,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/jdbc.properties">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/builder/xml/XMLMapperBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/service-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/entity/City.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/entity/TestTb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/entity/MyCity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/keygen/KeyGenerator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/keygen/Jdbc3KeyGenerator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/DynamicAddMappedStatement.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/scripting/xmltags/XMLLanguageDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisDefaultParameterHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        <state relative-caret-position="-5780">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/session/Configuration.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="495" column="16" lean-forward="false" selection-start-line="495" selection-start-column="16" selection-end-line="495" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/builder/MapperBuilderAssistant.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="188" column="27" lean-forward="false" selection-start-line="188" selection-start-column="27" selection-end-line="188" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/scripting/defaults/RawSqlSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/TableInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/TableFieldInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/AutoSqlInjector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4964">
-          <caret line="327" column="21" lean-forward="false" selection-start-line="327" selection-start-column="12" selection-end-line="327" selection-end-column="21" />
+        <state relative-caret-position="331">
+          <caret line="91" column="30" lean-forward="true" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
           <folding>
-            <element signature="e#17577#17578#0" expanded="true" />
-            <element signature="e#17623#17624#0" expanded="true" />
+            <element signature="e#2990#2991#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/SqlMethod.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/session/SqlSessionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="52" column="4" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+        <state relative-caret-position="155">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/InjectCrudMappedStatement.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="-1319">
+          <caret line="36" column="60" lean-forward="true" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="e#1634#1635#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXMLLanguageDriver.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar!/org/mybatis/spring/SqlSessionFactoryBean.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="-818">
+          <caret line="174" column="22" lean-forward="false" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXmlConfigBuilder.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/builder/xml/XMLConfigBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/Page.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/Page.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/plugin/Signature.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/TestInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/Pagination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/PaginationInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="114" column="28" lean-forward="false" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/CrudMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/resultset/ResultSetHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="199" column="9" lean-forward="true" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/Executor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/executor/BaseExecutor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="117" column="23" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/examples/Example.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <marker date="1539584861676" expanded="false" signature="1057:1068" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="1092:1098" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="1318:1329" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="1362:1368" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="1959:1970" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="1989:1995" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="2033:2044" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="2065:2071" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="2127:2138" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="2173:2179" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="2340:2350" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="2370:2376" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="2407:2418" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="2431:2437" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="4644:4655" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="4671:4677" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="4724:4735" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="4760:4766" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="4811:4822" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="4842:4848" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="4887:4898" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="4925:4931" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="5609:5620" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="5648:5654" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="8757:8772" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="8799:8809" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="8858:8873" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="8889:8899" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="8945:8960" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="8976:8986" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="15107:15122" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="15151:15161" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="15679:15694" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="15711:15721" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="15755:15770" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="15783:15793" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="15833:15848" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="15867:15877" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="15913:15928" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="15943:15953" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="15993:16008" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="16027:16037" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="16078:16093" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="16113:16123" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="16161:16176" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="16193:16203" ph=" }" />
-            <marker date="1539584861676" expanded="false" signature="16243:16258" ph=" { " />
-            <marker date="1539584861676" expanded="false" signature="16277:16287" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/TestMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/ISuperService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-564">
+        <state relative-caret-position="67">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1311,14 +966,307 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/impl/SuperServiceImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/reflection/factory/DefaultObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state relative-caret-position="111">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1352#1353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0-sources.jar!/com/google/common/base/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/type/BaseTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/type/IntegerTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/scripting/defaults/RawSqlSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/examples/Example.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/executor/loader/ProxyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/session/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="348" column="18" lean-forward="true" selection-start-line="348" selection-start-column="18" selection-end-line="348" selection-end-column="18" />
+          <folding>
+            <element signature="e#13826#13827#0" expanded="true" />
+            <element signature="e#13855#13856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="96" column="43" lean-forward="false" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/mybatis-plus.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/spring/MybatisMapperScannerConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/MyScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/PaginationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/plugins/pagination/IDialect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/service-spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="82" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/toolkit/TableInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="116" column="20" lean-forward="false" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+          <folding>
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2185#2186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/entity/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding>
+            <element signature="e#519#520#0" expanded="false" />
+            <element signature="e#557#558#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/ISuperService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/service/impl/SuperServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="40" />
+          <folding>
+            <element signature="e#2369#2370#0" expanded="true" />
+            <element signature="e#2426#2427#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/wens/TestMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/SqlMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="52" column="4" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/DelegateConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/support/mapper/CrudMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/scripting/defaults/DefaultParameterHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/AutoSqlInjector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="199" column="8" lean-forward="false" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXMLLanguageDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/scripting/xmltags/XMLLanguageDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5-sources.jar!/org/apache/ibatis/executor/keygen/KeyGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/MybatisQuickSqlSessionFactoryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/mapper/InjectCrudMappedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="221" column="77" lean-forward="false" selection-start-line="221" selection-start-column="77" selection-end-line="221" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisXmlConfigBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="109" column="52" lean-forward="true" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/wens/mybatis/MybatisDefaultParameterHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="85" column="7" lean-forward="false" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
+          <folding>
+            <element signature="e#1926#1934#0" expanded="true" />
+            <element signature="e#2429#2473#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -4,133 +4,132 @@ import java.io.Serializable;
 import java.util.Date;
 import java.math.BigDecimal;
 
-import com.github.wens.mybatis.annotations.TableField;
-import com.github.wens.mybatis.annotations.TableId;
-import com.github.wens.mybatis.annotations.TableName;
-import com.github.wens.mybatis.examples.Example;
+import com.github.wens.mybatis.annotations.Field;
+import com.github.wens.mybatis.annotations.Id;
+import com.github.wens.mybatis.annotations.Table;
 
 /**
  *
  * 
  *
  */
-@TableName(value = "test_tb")
+@Table(value = "test_tb")
 public class TestTb implements Serializable {
 
 	/**  */
-	@TableId
+	@Id
 	private Integer id;
 
 	/**  */
-	@TableField(value = "tinyint_field")
+	@Field(value = "tinyint_field")
 	private Integer tinyintField;
 
 	/**  */
-	@TableField(value = "smallint_field")
+	@Field(value = "smallint_field")
 	private Integer smallintField;
 
 	/**  */
-	@TableField(value = "mediumint_field")
+	@Field(value = "mediumint_field")
 	private Integer mediumintField;
 
 	/**  */
-	@TableField(value = "int_field")
+	@Field(value = "int_field")
 	private Integer intField;
 
 	/**  */
-	@TableField(value = "biginit_field")
+	@Field(value = "biginit_field")
 	private Long biginitField;
 
 	/**  */
-	@TableField(value = "fload_field")
+	@Field(value = "fload_field")
 	private Float floadField;
 
 	/**  */
-	@TableField(value = "double_field")
+	@Field(value = "double_field")
 	private Double doubleField;
 
 	/**  */
-	@TableField(value = "decimal_field")
+	@Field(value = "decimal_field")
 	private BigDecimal decimalField;
 
 	/**  */
-	@TableField(value = "bit_field")
+	@Field(value = "bit_field")
 	private Boolean bitField;
 
 	/**  */
-	@TableField(value = "char_field")
+	@Field(value = "char_field")
 	private String charField;
 
 	/**  */
-	@TableField(value = "varchar_field")
+	@Field(value = "varchar_field")
 	private String varcharField;
 
 	/**  */
-	@TableField(value = "tinytext_field")
+	@Field(value = "tinytext_field")
 	private String tinytextField;
 
 	/**  */
-	@TableField(value = "mediumtext_field")
+	@Field(value = "mediumtext_field")
 	private String mediumtextField;
 
 	/**  */
-	@TableField(value = "longtext_field")
+	@Field(value = "longtext_field")
 	private String longtextField;
 
 	/**  */
-	@TableField(value = "tinyblob_field")
+	@Field(value = "tinyblob_field")
 	private byte[] tinyblobField;
 
 	/**  */
-	@TableField(value = "mediumblob_field")
+	@Field(value = "mediumblob_field")
 	private byte[] mediumblobField;
 
 	/**  */
-	@TableField(value = "blob_field")
+	@Field(value = "blob_field")
 	private byte[] blobField;
 
 	/**  */
-	@TableField(value = "longblob_field")
+	@Field(value = "longblob_field")
 	private byte[] longblobField;
 
 	/**  */
-	@TableField(value = "binary_field")
+	@Field(value = "binary_field")
 	private Object binaryField;
 
 	/**  */
-	@TableField(value = "varbinary_field")
+	@Field(value = "varbinary_field")
 	private Object varbinaryField;
 
 	/**  */
-	@TableField(value = "enum_field")
+	@Field(value = "enum_field")
 	private Object enumField;
 
 	/**  */
-	@TableField(value = "set_field")
+	@Field(value = "set_field")
 	private Object setField;
 
 	/**  */
-	@TableField(value = "date_field")
+	@Field(value = "date_field")
 	private Date dateField;
 
 	/**  */
-	@TableField(value = "datetime_field")
+	@Field(value = "datetime_field")
 	private Date datetimeField;
 
 	/**  */
-	@TableField(value = "timestamp_field")
+	@Field(value = "timestamp_field")
 	private Date timestampField;
 
 	/**  */
-	@TableField(value = "time_field")
+	@Field(value = "time_field")
 	private Object timeField;
 
 	/**  */
-	@TableField(value = "year_field")
+	@Field(value = "year_field")
 	private Object yearField;
 
 	/**  */
-	@TableField(value = "json_field")
+	@Field(value = "json_field")
 	private Object jsonField;
 
 	public Integer getId() {

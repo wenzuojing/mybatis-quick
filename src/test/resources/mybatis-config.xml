@@ -32,19 +32,7 @@
 
 
     <!-- 插件配置 -->
-    <plugins>
-        <!--
-         | 分页插件配置
-         | 插件提供二种方言选择：1、默认方言 2、自定义方言实现类，两者均未配置则抛出异常！
-         | dialectType 数据库方言
-         |             默认支持  mysql  oracle  hsql  sqlite  postgre  sqlserver
-         | dialectClazz 方言实现类
-         |              自定义需要实现 com.baomidou.mybatis.plugins.pagination.IDialect 接口
-         | -->
-        <plugin interceptor="com.github.wens.mybatis.plugins.PaginationInterceptor">
-            <property name="dialectType" value="mysql"/>
-        </plugin>
-    </plugins>
+
 
     <!--
      | SQL映射定义Mappers
@@ -54,7 +42,5 @@
      | class    指向一个mapper接口
      | package  指向可以找到Mapper接口的包名
      | -->
-    <!--<mappers>
-        <mapper resource="com/zy/app/mapper/UserMapper.xml"/>
-    </mappers>-->
+
 </configuration>

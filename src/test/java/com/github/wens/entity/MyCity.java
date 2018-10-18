@@ -4,6 +4,10 @@ public class MyCity {
 
     private String name;
 
+    public MyCity(){
+        System.out.println("------");
+    }
+
     public String getName() {
         return name;
     }

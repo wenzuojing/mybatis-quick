@@ -4,7 +4,7 @@ import com.github.wens.mybatis.support.mapper.CrudMapper;
 import com.github.wens.mybatis.support.service.ISuperService;
 import com.github.wens.mybatis.examples.Example;
 import com.github.wens.mybatis.exceptions.MybatisQuickException;
-import com.github.wens.mybatis.plugins.Page;
+import com.github.wens.mybatis.support.Page;
 import com.github.wens.mybatis.toolkit.TableInfo;
 import com.github.wens.mybatis.toolkit.TableInfoHelper;
 import com.google.common.collect.Lists;
@@ -136,6 +136,7 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
 
     @Override
     public <E> E findOneByExample(Example<T> example, Class<E> entityClass) {
+        example.selectProperties(selectProperties(entityClass));
         T one = findOneByExample(example);
         if(one == null ){
             return null ;
@@ -151,6 +152,7 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
 
     @Override
     public <E> List<E> findListByExample(Example<T> example, Class<E> entityClass) {
+        example.selectProperties(selectProperties(entityClass));
         List<T> list = this.findListByExample(example);
         if(list == null ){
             return null ;
@@ -170,6 +172,7 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
 
     @Override
     public <E> Page<E> findPageByExample(Example<T> example, int pageNo, int pageSize, final Class<E> entityClass) {
+        example.selectProperties(selectProperties(entityClass));
         Page<T> page = this.findPageByExample(example, pageNo, pageSize);
         Page<E> page2 = new Page<>(page.getCurrent(),page.getSize());
         List<T> records = page.getRecords();

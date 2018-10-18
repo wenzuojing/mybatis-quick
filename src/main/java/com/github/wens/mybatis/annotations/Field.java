@@ -30,7 +30,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface TableField {
+public @interface Field {
 
     /**
      * 字段值（驼峰命名方式，该值可无）
