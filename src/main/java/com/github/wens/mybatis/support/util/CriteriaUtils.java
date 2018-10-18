@@ -4,7 +4,6 @@ package com.github.wens.mybatis.support.util;
 import com.github.wens.mybatis.example.Example;
 import com.github.wens.mybatis.exception.MybatisQuickException;
 import com.github.wens.mybatis.support.annotation.*;
-import org.springframework.util.StringUtils;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;

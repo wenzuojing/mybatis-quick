@@ -5,7 +5,7 @@ import com.github.wens.mybatis.TableInfo;
 import com.github.wens.mybatis.TableInfoHelper;
 import com.github.wens.mybatis.annotation.IdType;
 import com.github.wens.mybatis.support.mapper.CrudMapper;
-import com.github.wens.mybatis.support.util.StringUtil;
+import com.github.wens.mybatis.support.util.StringUtils;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import org.apache.ibatis.builder.MapperBuilderAssistant;
@@ -75,11 +75,11 @@ public class CrudMappedStatementBinding {
     }
 
     private void injectSelectPageByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectPageByExample","${ex.selectColumns}",exampleWhereClause(),exampleOrderByClause(),StringUtil.EMPTY);
+        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectPageByExample","${ex.selectColumns}",exampleWhereClause(),exampleOrderByClause(), StringUtils.EMPTY);
     }
 
     private void injectSelectListByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectListByExample","${ex.selectColumns}",exampleWhereClause(),exampleWhereClause(),StringUtil.EMPTY);
+        addSelectMappedStatement(assistant,mapperClass,modelClass,table,"selectListByExample","${ex.selectColumns}",exampleWhereClause(),exampleWhereClause(), StringUtils.EMPTY);
     }
 
     private void injectSelectOneByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
@@ -99,13 +99,13 @@ public class CrudMappedStatementBinding {
     }
 
     private void injectUpdateSelectiveByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        String setColumns = wrapTrim(Joiner.on(StringUtil.EMPTY).join(Lists.transform(table.getFieldList(), f -> "<if test=\"et." + f.getProperty() + "!=null\"> "+f.getColumn()+" = #{et." + f.getProperty() + "},</if>")),StringUtil.EMPTY,StringUtil.EMPTY,",");
+        String setColumns = wrapTrim(Joiner.on(StringUtils.EMPTY).join(Lists.transform(table.getFieldList(), f -> "<if test=\"et." + f.getProperty() + "!=null\"> "+f.getColumn()+" = #{et." + f.getProperty() + "},</if>")), StringUtils.EMPTY, StringUtils.EMPTY,",");
         String where = exampleWhereClause();
         addUpdateMappedStatement(assistant, mapperClass, modelClass, table, "updateSelectiveByExample",setColumns, where);
     }
 
     private void injectUpdateSelectiveById(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        String setColumns = wrapTrim(Joiner.on(StringUtil.EMPTY).join(Lists.transform(table.getFieldList(), f -> "<if test=\"et." + f.getProperty() + "!=null\"> "+f.getColumn()+" = #{et." + f.getProperty() + "},</if>")),"","",",");
+        String setColumns = wrapTrim(Joiner.on(StringUtils.EMPTY).join(Lists.transform(table.getFieldList(), f -> "<if test=\"et." + f.getProperty() + "!=null\"> "+f.getColumn()+" = #{et." + f.getProperty() + "},</if>")),"","",",");
         String where = wrapWhere(table.getKeyColumn() + " = #{et."+table.getKeyProperty()+"}" );
         addUpdateMappedStatement(assistant, mapperClass, modelClass, table, "updateSelectiveById",setColumns, where);
     }
@@ -236,7 +236,7 @@ public class CrudMappedStatementBinding {
     }
 
     private String wrapForeach(String src, String item, String index, String collection) {
-        return this.wrapForeach(src, item, index, collection, StringUtil.EMPTY);
+        return this.wrapForeach(src, item, index, collection, StringUtils.EMPTY);
     }
 
     private String wrapForeach(String src, String item, String index, String collection, String separator) {

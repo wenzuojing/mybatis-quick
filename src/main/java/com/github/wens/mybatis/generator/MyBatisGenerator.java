@@ -29,7 +29,6 @@ public class MyBatisGenerator {
         this.configuration = configuration;
     }
 
-
     public void generate() {
         if (configuration == null) {
             throw new MybatisQuickException(" Configuration is null. ");
@@ -238,14 +237,7 @@ public class MyBatisGenerator {
         return sb.toString();
     }
 
-    /**
-     * 构建类上面的注释
-     *
-     * @param bw
-     * @param text
-     * @return
-     * @throws IOException
-     */
+
     private BufferedWriter buildClassComment(BufferedWriter bw, String text) throws IOException {
         bw.newLine();
         bw.write("/**");
@@ -260,12 +252,7 @@ public class MyBatisGenerator {
         return bw;
     }
 
-    /**
-     * 生成实体类
-     *
-     * @param fieldInfos
-     * @throws IOException
-     */
+
     private void buildEntityBean(List<FieldInfo> fieldInfos, String tableComment,
                                  Map<String, IdInfo> idMap, String table, String beanName) throws IOException {
         File beanFile = new File(PATH_ENTITY, beanName + ".java");
@@ -398,13 +385,7 @@ public class MyBatisGenerator {
         return null;
     }
 
-    /**
-     * 构建Mapper文件
-     *
-     * @param beanName
-     * @param mapperName
-     * @throws IOException
-     */
+
     private void buildMapper(String beanName, String mapperName, Map<String, IdInfo> idMap) throws IOException {
         File mapperFile = new File(PATH_MAPPER, mapperName + ".java");
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(mapperFile), "utf-8"));
@@ -460,9 +441,7 @@ public class MyBatisGenerator {
         bw.newLine();
         bw.newLine();
 
-		/*
-		 * 下面开始写SqlMapper中的方法
-		 */
+
         buildSQL(bw, idMap, fieldInfos);
 
         bw.write("</binding>");
@@ -470,13 +449,6 @@ public class MyBatisGenerator {
         bw.close();
     }
 
-    /**
-     * 构建service文件
-     *
-     * @param beanName
-     * @param serviceName
-     * @throws IOException
-     */
     private void buildService(String beanName, String serviceName, Map<String, IdInfo> idMap) throws IOException {
         File serviceFile = new File(PATH_SERVICE, serviceName + ".java");
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(serviceFile), "utf-8"));
@@ -501,14 +473,6 @@ public class MyBatisGenerator {
         bw.close();
     }
 
-    /**
-     * 构建service实现类文件
-     *
-     * @param beanName
-     * @param serviceImplName
-     * @param mapperName
-     * @throws IOException
-     */
     private void buildServiceImpl(String beanName, String serviceImplName, String serviceName, String mapperName, Map<String, IdInfo> idMap) throws IOException {
         File serviceFile = new File(PATH_SERVICE_IMPL, serviceImplName + ".java");
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(serviceFile), "utf-8"));
@@ -578,12 +542,7 @@ public class MyBatisGenerator {
         return "" + tableName.charAt(0);
     }
 
-    /**
-     * 获取所有的数据库表注释
-     *
-     * @return
-     * @throws SQLException
-     */
+
     private Map<String, String> getTableComment(Connection conn) throws SQLException {
         Map<String, String> maps = new HashMap<String, String>();
         PreparedStatement pstate = conn.prepareStatement("show table status");

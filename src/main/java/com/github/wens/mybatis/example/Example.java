@@ -4,7 +4,7 @@ package com.github.wens.mybatis.example;
 import com.github.wens.mybatis.TableFieldInfo;
 import com.github.wens.mybatis.TableInfo;
 import com.github.wens.mybatis.TableInfoHelper;
-import com.github.wens.mybatis.support.util.StringUtil;
+import com.github.wens.mybatis.support.util.StringUtils;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -233,7 +233,7 @@ public class Example<T> {
                 isProperty = false;
                 return this;
             }
-            if (StringUtil.isNotEmpty(example.getOrderByClause())) {
+            if (StringUtils.isNotEmpty(example.getOrderByClause())) {
                 example.setOrderByClause(example.getOrderByClause() + "," + column);
             } else {
                 example.setOrderByClause(column);
