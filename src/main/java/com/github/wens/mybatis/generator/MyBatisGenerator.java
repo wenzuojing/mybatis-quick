@@ -44,7 +44,7 @@ public class MyBatisGenerator {
 
 
         PATH_ENTITY = getFilePath(gf.getPath(), "entity");
-        PATH_MAPPER = getFilePath(gf.getPath(), "binding");
+        PATH_MAPPER = getFilePath(gf.getPath(), "mapper");
         PATH_XML = getFilePath(gf.getPath(), "xml");
         PATH_SERVICE = getFilePath(gf.getPath(), "service");
         PATH_SERVICE_IMPL = getFilePath(PATH_SERVICE, "impl");
@@ -275,17 +275,13 @@ public class MyBatisGenerator {
             bw.write("import com.github.wens.mybatis.annotation.IdType;");
             bw.newLine();
         }
-        bw.write("import com.github.wens.mybatis.annotation.TableField;");
-        bw.newLine();
-        bw.write("import com.github.wens.mybatis.annotation.TableId;");
-        bw.newLine();
-        bw.write("import com.github.wens.mybatis.annotation.TableName;");
+        bw.write("import com.github.wens.mybatis.annotation.*;");
         bw.newLine();
         bw.write("import com.github.wens.mybatis.example.Example;");
         bw.newLine();
         bw = buildClassComment(bw, tableComment);
         bw.newLine();
-        bw.write("@TableName(value = \"" + table + "\")");
+        bw.write("@Table(value = \"" + table + "\")");
         bw.newLine();
         bw.write("public class " + beanName + " implements Serializable {");
         bw.newLine();
@@ -306,7 +302,7 @@ public class MyBatisGenerator {
             IdInfo idInfo = idMap.get(column);
             if (idInfo != null) {
                 //@TableId(value = "test_id", type = IdType.AUTO_INCREMENT)
-                bw.write("\t@TableId");
+                bw.write("\t@Id");
                 String idType = toIdType(idInfo);
                 if (idInfo.autoIncrement) {
                     System.err.println(" Table :{ " + table + " } ID is Auto increment");
@@ -339,7 +335,7 @@ public class MyBatisGenerator {
                 bw.newLine();
             } else if (isLine) {
                 //@TableField(value = "test_type", exist = false)
-                bw.write("\t@TableField(value = \"" + column + "\")");
+                bw.write("\t@Field(value = \"" + column + "\")");
                 bw.newLine();
             }
             bw.write("\tprivate " + processType(fieldInfos.get(i).type) + " " + field + ";");
@@ -394,7 +390,7 @@ public class MyBatisGenerator {
         bw.newLine();
         bw.write("import " + configuration.getEntityPackage() + "." + beanName + ";");
         bw.newLine();
-        bw.write("import com.github.wens.mybatis.support.binding.CrudMapper;");
+        bw.write("import com.github.wens.mybatis.support.mapper.CrudMapper;");
         bw.newLine();
 
         bw = buildClassComment(bw, beanName + " 表数据库控制层接口");
@@ -435,16 +431,14 @@ public class MyBatisGenerator {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(mapperXmlFile)));
         bw.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
         bw.newLine();
-        bw.write("<!DOCTYPE binding PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-binding.dtd\">");
+        bw.write("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\">");
         bw.newLine();
-        bw.write("<binding namespace=\"" + configuration.getMapperPackage() + "." + mapperName + "\">");
+        bw.write("<mapper namespace=\"" + configuration.getMapperPackage() + "." + mapperName + "\">");
         bw.newLine();
         bw.newLine();
-
 
         buildSQL(bw, idMap, fieldInfos);
-
-        bw.write("</binding>");
+        bw.write("</mapper>");
         bw.flush();
         bw.close();
     }

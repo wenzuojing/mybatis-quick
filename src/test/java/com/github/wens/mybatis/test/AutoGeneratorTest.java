@@ -40,14 +40,14 @@ public class AutoGeneratorTest {
      */
     public static void main(String[] args) {    
         Configuration cg = new Configuration();
-        cg.setEntityPackage("com.github.wens.entity");//entity 实体包路径
-        cg.setMapperPackage("com.github.wens.binding");//binding 映射文件路径
-        cg.setServicePackage("com.github.wens.service");//service 层路径
+        cg.setEntityPackage("com.github.wens.mybatis.test.entity");//entity 实体包路径
+        cg.setMapperPackage("com.github.wens.mybatis.test.mapper");//binding 映射文件路径
+        cg.setServicePackage("com.github.wens.mybatis.test.service");//service 层路径
 
 		/* 此处可以配置 SuperServiceImpl 子类路径，默认如下 */
         //cg.setSuperServiceImpl("com.baomidou.framework.service.impl.SuperServiceImpl");
 
-        cg.setSaveDir("/Users/wens/dev/mybatis-quick/src/test/java/com/github/wens");// 生成文件保存位置
+        cg.setSaveDir("/Users/wens/dev/mybatis-quick/src/test/java/com/github/wens/mybatis/test");// 生成文件保存位置
 
 		/*
          * 设置字段是否为驼峰命名，驼峰 true 下划线分割 false
@@ -56,9 +56,9 @@ public class AutoGeneratorTest {
 
 		/* 数据库相关配置 */
         cg.setDbDriverName("com.mysql.jdbc.Driver");
-        cg.setDbUser("test");
-        cg.setDbPassword("test@yuyou");
-        cg.setDbUrl("jdbc:mysql://118.89.27.94:12420/test_db?useUnicode=true&characterEncoding=utf8");
+        cg.setDbUser("root");
+        cg.setDbPassword("123456");
+        cg.setDbUrl("jdbc:mysql://192.168.15.101:3306/test_db?useUnicode=true&characterEncoding=utf8");
 
 		/*
 		 * 表主键 ID 生成类型, 自增该设置无效。
