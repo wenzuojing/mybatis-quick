@@ -23,12 +23,17 @@
     </settings>
 
     <typeAliases>
+        <typeHandlers>
+            <typeHandler handler="org.sang.db.MyDateTypeHandler"/>
+        </typeHandlers>
         <!-- <package name="com.zy.app.entity.Message"></package>
          <package name="com.zy.app.entity.TbUser"></package>
  -->
 
         <!--<package name="com.zy.app.dto.MyMessage"></package>-->
     </typeAliases>
+
+
 
 
     <!-- 插件配置 -->
@@ -42,5 +47,7 @@
      | class    指向一个mapper接口
      | package  指向可以找到Mapper接口的包名
      | -->
+
+
 
 </configuration>

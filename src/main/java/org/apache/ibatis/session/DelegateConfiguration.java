@@ -1,5 +1,7 @@
 package org.apache.ibatis.session;
 
+import com.github.wens.mybatis.JSONArrayTypeHandler;
+import com.github.wens.mybatis.JSONObjectTypeHandler;
 import com.github.wens.mybatis.binding.CrudMappedStatementBinding;
 import com.github.wens.mybatis.plugin.PaginationInterceptor;
 import com.github.wens.mybatis.support.mapper.CrudMapper;
@@ -54,6 +56,8 @@ public class DelegateConfiguration extends Configuration{
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
         paginationInterceptor.setDialectType("mysql");
         this.configuration.addInterceptor(paginationInterceptor);
+        this.configuration.getTypeHandlerRegistry().register(JSONObjectTypeHandler.class);
+        this.configuration.getTypeHandlerRegistry().register(JSONArrayTypeHandler.class);
     }
 
     @Override

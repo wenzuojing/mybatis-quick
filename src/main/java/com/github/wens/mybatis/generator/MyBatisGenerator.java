@@ -2,6 +2,7 @@ package com.github.wens.mybatis.generator;
 
 import com.github.wens.mybatis.annotation.IdType;
 import com.github.wens.mybatis.exception.MybatisQuickException;
+import com.github.wens.mybatis.support.util.StringUtils;
 
 import java.io.*;
 import java.sql.*;
@@ -164,7 +165,7 @@ public class MyBatisGenerator {
     }
 
 
-    private String processType(String type) {
+    private String processType(String type , String comment) {
         if (type.indexOf("char") > -1) {
             return "String";
         } else if (type.indexOf("bigint") > -1) {
@@ -185,6 +186,10 @@ public class MyBatisGenerator {
             return "Float";
         } else if (type.indexOf("double") > -1) {
             return "Double";
+        } else if (type.indexOf("enum") > -1 || type.indexOf("set") > -1) {
+            return "String";
+        } else if (type.indexOf("json") > -1) {
+            return StringUtils.isEmpty(comment) || !comment.contains("array") ? "com.alibaba.fastjson.JSONObject" : "com.alibaba.fastjson.JSONArray";
         }else{
             return "Object" ;
 
@@ -338,7 +343,7 @@ public class MyBatisGenerator {
                 bw.write("\t@Field(value = \"" + column + "\")");
                 bw.newLine();
             }
-            bw.write("\tprivate " + processType(fieldInfos.get(i).type) + " " + field + ";");
+            bw.write("\tprivate " + processType(fieldInfos.get(i).type ,fieldInfos.get(i).comment) + " " + field + ";");
             bw.newLine();
         }
 
@@ -346,7 +351,7 @@ public class MyBatisGenerator {
 		 * 生成get 和 set方法
 		 */
         for (int i = 0; i < size; i++) {
-            String _tempType = processType(fieldInfos.get(i).type);
+            String _tempType = processType(fieldInfos.get(i).type,fieldInfos.get(i).type);
             String _tempField = processField(fieldInfos.get(i).column);
             String _field = _tempField.substring(0, 1).toUpperCase() + _tempField.substring(1);
             bw.newLine();

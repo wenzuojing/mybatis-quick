@@ -16,11 +16,8 @@
 package com.github.wens.mybatis.test;
 
 import com.github.wens.mybatis.annotation.IdType;
-import com.github.wens.mybatis.generator.MyBatisGenerator;
 import com.github.wens.mybatis.generator.Configuration;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.github.wens.mybatis.generator.MyBatisGenerator;
 
 /**
  * <p>
