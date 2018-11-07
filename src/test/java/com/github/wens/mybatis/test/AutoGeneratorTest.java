@@ -1,18 +1,3 @@
-/**
- * Copyright (c) 2011-2014, hubin (jobob@qq.com).
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
 package com.github.wens.mybatis.test;
 
 import com.github.wens.mybatis.annotation.IdType;
@@ -20,12 +5,8 @@ import com.github.wens.mybatis.generator.Configuration;
 import com.github.wens.mybatis.generator.MyBatisGenerator;
 
 /**
- * <p>
- * 自动生成映射工具类测试
- * </p>
- *
- * @author hubin
- * @Date 2016-01-23
+ * @author wens
+ * @Date 2018-10-10
  */
 public class AutoGeneratorTest {
 
@@ -35,7 +16,7 @@ public class AutoGeneratorTest {
      * 配置方法查看 {@link Configuration}
      * </p>
      */
-    public static void main(String[] args) {    
+    public static void main(String[] args) {
         Configuration cg = new Configuration();
         cg.setEntityPackage("com.github.wens.mybatis.test.entity");//entity 实体包路径
         cg.setMapperPackage("com.github.wens.mybatis.test.mapper");//binding 映射文件路径
@@ -58,7 +39,7 @@ public class AutoGeneratorTest {
         cg.setDbUrl("jdbc:mysql://192.168.15.101:3306/test_db?useUnicode=true&characterEncoding=utf8");
 
 		/*
-		 * 表主键 ID 生成类型, 自增该设置无效。
+         * 表主键 ID 生成类型, 自增该设置无效。
 		 * <p>
 		 * IdType.AUTO 			数据库ID自增
 		 * IdType.ID_WORKER		全局唯一ID，内容为空自动填充（默认配置）

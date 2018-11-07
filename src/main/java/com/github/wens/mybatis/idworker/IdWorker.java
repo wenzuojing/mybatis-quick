@@ -41,14 +41,14 @@ public class IdWorker {
 
     public static synchronized long getId() {
 
-        while (true){
+        while (true) {
             long id = sequence.nextId();
-            if(recentIds.getIfPresent(id) != null ){
+            if (recentIds.getIfPresent(id) != null) {
                 //log.warn("Duplication id");
                 continue;
             }
-            recentIds.put(id,timeGen());
-            return id ;
+            recentIds.put(id, timeGen());
+            return id;
         }
 
     }

@@ -1,7 +1,6 @@
 package com.github.wens.mybatis;
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */

@@ -13,7 +13,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */
@@ -35,7 +34,7 @@ public class TableInfoHelper {
         if (table != null && table.value() != null && table.value().trim().length() > 0) {
             tableInfo.setTableName(table.value());
         } else {
-            tableInfo.setTableName(CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL,clazz.getSimpleName()));
+            tableInfo.setTableName(CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, clazz.getSimpleName()));
         }
 
         List<TableFieldInfo> fieldList = new ArrayList<TableFieldInfo>();
@@ -61,7 +60,7 @@ public class TableInfoHelper {
                 fieldList.add(new TableFieldInfo(true, tableField.value(), field.getName()));
                 continue;
             }
-			
+
 			/* 字段 */
             fieldList.add(new TableFieldInfo(field.getName()));
         }

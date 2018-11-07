@@ -19,7 +19,6 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */
@@ -32,11 +31,11 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
     @Autowired
     protected M mapper;
 
-    public   SuperServiceImpl(){
+    public SuperServiceImpl() {
         Type type = this.getClass().getGenericSuperclass();
-        if(type instanceof ParameterizedType && ((ParameterizedType) type).getRawType().equals(SuperServiceImpl.class) ){
+        if (type instanceof ParameterizedType && ((ParameterizedType) type).getRawType().equals(SuperServiceImpl.class)) {
             Type[] parameters = ((ParameterizedType) type).getActualTypeArguments();
-            entityClass  = (Class<T>) parameters[1];
+            entityClass = (Class<T>) parameters[1];
             table = TableInfoHelper.getTableInfo(entityClass);
         }
     }
@@ -105,27 +104,27 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
     }
 
     public List<T> findByIds(List<I> ids) {
-        if(ids == null || ids.isEmpty() ){
-            return Collections.EMPTY_LIST ;
+        if (ids == null || ids.isEmpty()) {
+            return Collections.EMPTY_LIST;
         }
         return mapper.selectByIds(ids);
     }
 
     @Override
     public <E> List<E> findByIds(List<I> ids, Class<E> entityClass) {
-        if(ids == null || ids.size() == 0 ){
-            return Collections.EMPTY_LIST ;
+        if (ids == null || ids.size() == 0) {
+            return Collections.EMPTY_LIST;
         }
         Example<T> example = Example.of(this.entityClass);
-        example.createCriteria().andIn(this.table.getKeyProperty(),ids);
+        example.createCriteria().andIn(this.table.getKeyProperty(), ids);
         List<T> list = this.findListByExample(example);
-        if(list == null ){
-            return null ;
+        if (list == null) {
+            return null;
         }
         return Lists.transform(list, item -> {
             E e = instance(entityClass);
-            BeanUtils.copyProperties(item,e);
-            return e ;
+            BeanUtils.copyProperties(item, e);
+            return e;
         });
     }
 
@@ -138,12 +137,12 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
     public <E> E findOneByExample(Example<T> example, Class<E> entityClass) {
         example.selectProperties(selectProperties(entityClass));
         T one = findOneByExample(example);
-        if(one == null ){
-            return null ;
+        if (one == null) {
+            return null;
         }
         E e = instance(entityClass);
-        BeanUtils.copyProperties(one,e);
-        return e ;
+        BeanUtils.copyProperties(one, e);
+        return e;
     }
 
     public List<T> findListByExample(Example<T> example) {
@@ -154,13 +153,13 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
     public <E> List<E> findListByExample(Example<T> example, Class<E> entityClass) {
         example.selectProperties(selectProperties(entityClass));
         List<T> list = this.findListByExample(example);
-        if(list == null ){
-            return null ;
+        if (list == null) {
+            return null;
         }
         return Lists.transform(list, item -> {
             E e = instance(entityClass);
-            BeanUtils.copyProperties(item,e);
-            return e ;
+            BeanUtils.copyProperties(item, e);
+            return e;
         });
     }
 
@@ -174,19 +173,19 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
     public <E> Page<E> findPageByExample(Example<T> example, int pageNo, int pageSize, final Class<E> entityClass) {
         example.selectProperties(selectProperties(entityClass));
         Page<T> page = this.findPageByExample(example, pageNo, pageSize);
-        Page<E> page2 = new Page<>(page.getCurrent(),page.getSize());
+        Page<E> page2 = new Page<>(page.getCurrent(), page.getSize());
         List<T> records = page.getRecords();
-        if(records != null ){
+        if (records != null) {
             page2.setRecords(Lists.transform(records, item -> {
                 E e = instance(entityClass);
-               BeanUtils.copyProperties(item,e);
-               return e ;
+                BeanUtils.copyProperties(item, e);
+                return e;
             }));
         }
         return page2;
     }
 
-    private <E> E instance(Class<E> entityClass){
+    private <E> E instance(Class<E> entityClass) {
         try {
             return entityClass.newInstance();
         } catch (Exception e) {
@@ -194,12 +193,12 @@ public class SuperServiceImpl<M extends CrudMapper<T, I>, T, I> implements ISupe
         }
     }
 
-    private String[] selectProperties(Class<?> entityClass){
+    private String[] selectProperties(Class<?> entityClass) {
         Field[] fields = entityClass.getDeclaredFields();
         List<String> props = new ArrayList<>(fields.length);
 
-        for(Field field : fields ){
-            if( table.getColumn(field.getName()) != null ){
+        for (Field field : fields) {
+            if (table.getColumn(field.getName()) != null) {
                 props.add(field.getName());
             }
         }

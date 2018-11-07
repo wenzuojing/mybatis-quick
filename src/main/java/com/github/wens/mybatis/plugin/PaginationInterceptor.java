@@ -1,18 +1,3 @@
-/**
- * Copyright (c) 2011-2014, hubin (jobob@qq.com).
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
 package com.github.wens.mybatis.plugin;
 
 import com.github.wens.mybatis.exception.MybatisQuickException;
@@ -38,14 +23,10 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * <p>
- * 分页拦截器
- * </p>
- *
- * @author hubin
- * @Date 2016-01-23
+ * @author wens
+ * @Date 2018-10-10
  */
-@Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class,Integer.class})})
+@Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class, Integer.class})})
 public class PaginationInterceptor implements Interceptor {
 
     /* 方言类型 */
@@ -82,7 +63,7 @@ public class PaginationInterceptor implements Interceptor {
                     }
                 }
             }
-			
+
 			/* 未配置方言则抛出异常 */
             if (dialect == null) {
                 throw new MybatisQuickException("The value of the dialect property in mybatis configuration.xml is not defined.");
@@ -147,16 +128,16 @@ public class PaginationInterceptor implements Interceptor {
         ResultSet rs = null;
         try {
             pstmt = connection.prepareStatement(countSql.toString());
-           BoundSql countBS = new BoundSql(mappedStatement.getConfiguration(), countSql.toString(),
+            BoundSql countBS = new BoundSql(mappedStatement.getConfiguration(), countSql.toString(),
                     boundSql.getParameterMappings(), boundSql.getParameterObject());
             ParameterHandler parameterHandler = new DefaultParameterHandler(mappedStatement,
                     boundSql.getParameterObject(), countBS);
 
             List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
-            if(parameterMappings != null ){
-                for(ParameterMapping pm : parameterMappings ){
-                    if(boundSql.getAdditionalParameter(pm.getProperty()) != null ){
-                        countBS.setAdditionalParameter( pm.getProperty() , boundSql.getAdditionalParameter(pm.getProperty()) ) ;
+            if (parameterMappings != null) {
+                for (ParameterMapping pm : parameterMappings) {
+                    if (boundSql.getAdditionalParameter(pm.getProperty()) != null) {
+                        countBS.setAdditionalParameter(pm.getProperty(), boundSql.getAdditionalParameter(pm.getProperty()));
                     }
 
                 }
@@ -170,13 +151,13 @@ public class PaginationInterceptor implements Interceptor {
             page.setTotal(total);
 
         } catch (SQLException e) {
-            throw new RuntimeException("Execute count fail!" ,e) ;
+            throw new RuntimeException("Execute count fail!", e);
         } finally {
             try {
-                if(rs != null ){
+                if (rs != null) {
                     rs.close();
                 }
-                if(pstmt != null ){
+                if (pstmt != null) {
                     pstmt.close();
                 }
             } catch (SQLException e) {

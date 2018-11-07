@@ -10,15 +10,14 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */
 public class Example<T> {
 
-    private static Map<String,String> allSelectColumnCache = new ConcurrentHashMap<>();
+    private static Map<String, String> allSelectColumnCache = new ConcurrentHashMap<>();
 
-    public static <T> Example<T> of(Class<T> entityClass){
+    public static <T> Example<T> of(Class<T> entityClass) {
         return new Example<>(entityClass);
     }
 
@@ -40,7 +39,7 @@ public class Example<T> {
 
     protected OrderBy ORDERBY;
 
-    protected Integer limit ;
+    protected Integer limit;
 
 
     public Example(Class<T> entityClass) {
@@ -79,8 +78,8 @@ public class Example<T> {
         return this.ORDERBY;
     }
 
-    public void limit(Integer limit ){
-        this.limit = limit ;
+    public void limit(Integer limit) {
+        this.limit = limit;
     }
 
     public Integer getLimit() {
@@ -90,14 +89,13 @@ public class Example<T> {
     public String getSelectColumns() {
 
 
-        if(this.selectColumns == null ){
-
+        if (this.selectColumns == null) {
 
 
             return selectAllColumn(table);
 
 
-        }else {
+        } else {
             StringBuilder columns = new StringBuilder();
 
             if (table.isKeyRelated()) {
@@ -106,10 +104,10 @@ public class Example<T> {
                 columns.append(table.getKeyProperty());
             }
 
-            for(String column : selectColumns ){
+            for (String column : selectColumns) {
                 columns.append(",").append(column).append(" AS ").append(table.getProperty(column));
             }
-            return  columns.toString() ;
+            return columns.toString();
         }
 
 
@@ -117,8 +115,8 @@ public class Example<T> {
 
     private String selectAllColumn(TableInfo table) {
         String s = allSelectColumnCache.get(table.getTableName());
-        if(s != null ){
-            return s ;
+        if (s != null) {
+            return s;
         }
 
         StringBuilder columns = new StringBuilder();
@@ -134,9 +132,9 @@ public class Example<T> {
                 columns.append(" AS ").append(fieldInfo.getProperty());
             }
         }
-        s  = columns.toString() ;
-        allSelectColumnCache.put(table.getTableName(),s );
-        return s ;
+        s = columns.toString();
+        allSelectColumnCache.put(table.getTableName(), s);
+        return s;
     }
 
     /**
@@ -152,7 +150,7 @@ public class Example<T> {
             }
             for (String property : properties) {
                 String column = table.getColumn(property);
-                if ( column != null && !table.getKeyColumn().equals(column)) {
+                if (column != null && !table.getKeyColumn().equals(column)) {
                     this.selectColumns.add(column);
                 }
             }
@@ -393,9 +391,9 @@ public class Example<T> {
         }
 
         public Criteria andIn(String property, Collection<?> values) {
-            if(values == null || values.isEmpty() ){
+            if (values == null || values.isEmpty()) {
                 addCriterion("1 <> 1");
-            }else{
+            } else {
                 addCriterion(column(property) + " in", values, property(property));
             }
 
@@ -403,7 +401,7 @@ public class Example<T> {
         }
 
         public Criteria andNotIn(String property, Collection<?> values) {
-            if(values != null && !values.isEmpty() ){
+            if (values != null && !values.isEmpty()) {
                 addCriterion(column(property) + " not in", values, property(property));
             }
             return (Criteria) this;

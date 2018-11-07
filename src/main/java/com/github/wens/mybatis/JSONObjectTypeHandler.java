@@ -10,36 +10,39 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+/**
+ * @author wens
+ * @Date 2018-10-10
+ */
 public class JSONObjectTypeHandler extends BaseTypeHandler<JSONObject> {
 
 
     @Override
     public void setNonNullParameter(PreparedStatement preparedStatement, int i, JSONObject jsonObject, JdbcType jdbcType) throws SQLException {
-        preparedStatement.setString(i ,jsonObject.toJSONString() );
+        preparedStatement.setString(i, jsonObject.toJSONString());
     }
 
     @Override
     public JSONObject getNullableResult(ResultSet resultSet, String s) throws SQLException {
-        return parseObject(resultSet.getString(s)) ;
+        return parseObject(resultSet.getString(s));
     }
 
 
     @Override
     public JSONObject getNullableResult(ResultSet resultSet, int i) throws SQLException {
-        return parseObject(resultSet.getString(i)) ;
+        return parseObject(resultSet.getString(i));
     }
 
     @Override
     public JSONObject getNullableResult(CallableStatement callableStatement, int i) throws SQLException {
-        return parseObject(callableStatement.getString(i)) ;
+        return parseObject(callableStatement.getString(i));
     }
 
 
-    private JSONObject parseObject(String value ) {
-        if(value == null ){
+    private JSONObject parseObject(String value) {
+        if (value == null) {
             return new JSONObject();
-        }else{
+        } else {
             return JSON.parseObject(value);
         }
     }

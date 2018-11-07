@@ -11,7 +11,6 @@ import java.util.Arrays;
 import java.util.Collection;
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */
@@ -28,7 +27,7 @@ public class CriteriaUtils {
 
         for (Field field : fields) {
 
-            if( field.getAnnotation(Ignore.class) != null ){
+            if (field.getAnnotation(Ignore.class) != null) {
                 continue;
             }
 
@@ -57,12 +56,12 @@ public class CriteriaUtils {
                 } else if (annotation instanceof FullLike) {
                     FullLike fullLike = (FullLike) annotation;
                     criteria.andLike(StringUtils.isEmpty(fullLike.name()) ? name : fullLike.name(), "%" + value + "%");
-                } else if (annotation instanceof In){
-                    In in =(In) annotation;
-                    if( !field.getType().isArray() || !field.getType().isAssignableFrom(Collection.class) ){
+                } else if (annotation instanceof In) {
+                    In in = (In) annotation;
+                    if (!field.getType().isArray() || !field.getType().isAssignableFrom(Collection.class)) {
                         throw new MybatisQuickException("Field type must be array or collection for annotation In.");
                     }
-                    criteria.andIn(StringUtils.isEmpty(in.name()) ? name : in.name(), field.getType().isArray() ? Arrays.asList((Object[]) value) : ( Collection<Object> )value );
+                    criteria.andIn(StringUtils.isEmpty(in.name()) ? name : in.name(), field.getType().isArray() ? Arrays.asList((Object[]) value) : (Collection<Object>) value);
                 } else if (annotation instanceof LessThan) {
                     LessThan lessThan = (LessThan) annotation;
                     criteria.andLessThan(StringUtils.isEmpty(lessThan.name()) ? name : lessThan.name(), value);
@@ -75,8 +74,7 @@ public class CriteriaUtils {
                 } else if (annotation instanceof LessOrEqualThan) {
                     LessOrEqualThan lessOrEqualThan = (LessOrEqualThan) annotation;
                     criteria.andLessThanOrEqualTo(StringUtils.isEmpty(lessOrEqualThan.name()) ? name : lessOrEqualThan.name(), value);
-                }
-                else {
+                } else {
                     criteria.andLike(name, "%" + value + "%");
                 }
             }

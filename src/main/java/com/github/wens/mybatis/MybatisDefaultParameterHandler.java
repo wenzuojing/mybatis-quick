@@ -11,7 +11,6 @@ import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 import java.util.*;
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */
@@ -23,8 +22,8 @@ public class MybatisDefaultParameterHandler extends DefaultParameterHandler {
 
 
     protected static Object processParameterObject(MappedStatement ms, Object parameterObject) {
-        if(ms.getSqlCommandType() != SqlCommandType.INSERT){
-            return parameterObject ;
+        if (ms.getSqlCommandType() != SqlCommandType.INSERT) {
+            return parameterObject;
         }
 
         Collection<Object> parameters = getCollectionFromParameters(parameterObject);
@@ -73,7 +72,7 @@ public class MybatisDefaultParameterHandler extends DefaultParameterHandler {
                 metaParam.setValue(tableInfo.getKeyProperty(), value);
             }
             return metaParam.getOriginalObject();
-        }else{
+        } else {
             return parameterObject;
         }
     }

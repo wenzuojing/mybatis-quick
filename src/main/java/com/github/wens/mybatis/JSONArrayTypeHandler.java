@@ -10,13 +10,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+/**
+ * @author wens
+ * @Date 2018-10-10
+ */
 public class JSONArrayTypeHandler extends BaseTypeHandler<JSONArray> {
 
 
     @Override
     public void setNonNullParameter(PreparedStatement preparedStatement, int i, JSONArray objects, JdbcType jdbcType) throws SQLException {
-        preparedStatement.setString(i , objects.toJSONString() );
+        preparedStatement.setString(i, objects.toJSONString());
     }
 
     @Override
@@ -34,10 +37,10 @@ public class JSONArrayTypeHandler extends BaseTypeHandler<JSONArray> {
         return parseArray(callableStatement.getString(i));
     }
 
-    private JSONArray parseArray(String value ) {
-        if(value == null ){
+    private JSONArray parseArray(String value) {
+        if (value == null) {
             return new JSONArray();
-        }else{
+        } else {
             return JSON.parseArray(value);
         }
     }

@@ -5,7 +5,6 @@ import com.github.wens.mybatis.annotation.IdType;
 import java.util.List;
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */

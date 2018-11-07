@@ -38,17 +38,15 @@ import java.util.*;
 
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */
-public class DelegateConfiguration extends Configuration{
-    
+public class DelegateConfiguration extends Configuration {
+
     private Configuration configuration;
 
     private CrudMappedStatementBinding injectCrudMappedStatement;
 
-    
 
     public DelegateConfiguration(Configuration configuration) {
         this.configuration = configuration;

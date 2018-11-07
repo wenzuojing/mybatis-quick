@@ -2,7 +2,6 @@ package com.github.wens.mybatis.support.util;
 
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */

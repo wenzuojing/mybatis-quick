@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- *
  * @author wens
  * @Date 2018-10-10
  */
@@ -17,7 +16,7 @@ public class Page<T> extends Pagination {
      */
     private List<T> records = Collections.emptyList();
 
-    private Object  extra ;
+    private Object extra;
 
 
     protected Page() {

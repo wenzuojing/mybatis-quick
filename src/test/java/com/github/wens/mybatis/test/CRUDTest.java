@@ -22,31 +22,29 @@ public class CRUDTest {
     private ITestTbService testTbService;
 
     @Before
-    public void before(){
+    public void before() {
         testTbService.deleteByExample(Example.of(TestTb.class));
     }
 
 
-
     @Test
-    public void test_insert(){
+    public void test_insert() {
         testTbService.insert(newTestTb());
     }
 
 
     @Test
-    public void test_insert2(){
+    public void test_insert2() {
 
     }
 
     @Test
-    public void test_1(){
+    public void test_1() {
         testTbService.findById(1l);
     }
 
 
-
-    private TestTb newTestTb(){
+    private TestTb newTestTb() {
         TestTb testTb = new TestTb();
         testTb.setId(1);
         testTb.setTinyintField(1);
@@ -79,12 +77,10 @@ public class CRUDTest {
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("xxx" ,"fdfdf") ;
+        jsonObject.put("xxx", "fdfdf");
         testTb.setJsonField(jsonObject);
         return testTb;
     }
-
-
 
 
 }
