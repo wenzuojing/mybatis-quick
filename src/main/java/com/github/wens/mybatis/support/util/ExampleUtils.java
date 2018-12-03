@@ -14,7 +14,24 @@ import java.util.Collection;
  * @author wens
  * @Date 2018-10-10
  */
-public class CriteriaUtils {
+public class ExampleUtils {
+
+    public static void orderBy(Example<?> example , String field ){
+        String[] items = field.split(":");
+        Example.OrderBy orderBy = example.orderBy(items[0]);
+
+        if(items.length == 2 ){
+            if("asc".equals(items[1])){
+                orderBy.asc();
+            }else if("desc".equals(items[1])){
+                orderBy.desc();
+            }else{
+                orderBy.desc();
+            }
+        }else{
+            orderBy.desc() ;
+        }
+    }
 
 
     public static void fillCondition(Example.Criteria criteria, Object condition) {
