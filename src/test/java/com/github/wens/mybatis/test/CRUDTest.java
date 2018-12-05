@@ -29,12 +29,15 @@ public class CRUDTest {
 
     @Test
     public void test_insert() {
-        testTbService.insert(newTestTb());
+        testTbService.insertSelective(newTestTb());
     }
 
 
     @Test
-    public void test_insert2() {
+    public void test_count() {
+        testTbService.insert(newTestTb());
+        long l = testTbService.countByExample(Example.of(TestTb.class));
+        System.out.println(l);
 
     }
 

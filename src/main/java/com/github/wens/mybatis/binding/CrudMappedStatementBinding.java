@@ -75,7 +75,7 @@ public class CrudMappedStatementBinding {
     }
 
     private void injectCountByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
-        addSelectMappedStatement(assistant, mapperClass, null, table, "countByExample", "count(*)", exampleWhereClause(), StringUtils.EMPTY, StringUtils.EMPTY);
+        addSelectMappedStatement(assistant, mapperClass, Long.class, table, "countByExample", "count(*)", exampleWhereClause(), StringUtils.EMPTY, StringUtils.EMPTY);
     }
 
     private void injectSelectPageByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
@@ -158,7 +158,7 @@ public class CrudMappedStatementBinding {
 
     private void injectInsertSelective(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
 
-        String columns = Joiner.on("").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getColumn() + "!=null\">" + f.getColumn() + ",</if>"));
+        String columns = Joiner.on("").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getProperty() + "!=null\">" + f.getColumn() + ",</if>"));
         String placeholders = Joiner.on("").join(Lists.transform(table.getFieldList(), f -> "<if test=\"" + f.getProperty() + "!=null\">#{" + f.getProperty() + "},</if>"));
         if (table.getIdType() != IdType.AUTO) {
             columns = table.getKeyColumn() + "," + columns;
