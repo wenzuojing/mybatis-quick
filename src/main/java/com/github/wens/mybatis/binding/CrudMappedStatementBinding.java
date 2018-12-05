@@ -69,7 +69,13 @@ public class CrudMappedStatementBinding {
         this.injectSelectListByExample(assistant, mapperClass, modelClass, table);
         this.injectSelectPageByExample(assistant, mapperClass, modelClass, table);
 
+        this.injectCountByExample(assistant, mapperClass, modelClass, table);
 
+
+    }
+
+    private void injectCountByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {
+        addSelectMappedStatement(assistant, mapperClass, null, table, "countByExample", "count(*)", exampleWhereClause(), StringUtils.EMPTY, StringUtils.EMPTY);
     }
 
     private void injectSelectPageByExample(MapperBuilderAssistant assistant, Class<?> mapperClass, Class<?> modelClass, TableInfo table) {

@@ -26,7 +26,7 @@ public class BeanUtils {
 
     public static void copyProperties(Object dest, Object orig) {
         try {
-            org.apache.commons.beanutils.BeanUtils.copyProperties(dest, orig);
+            org.apache.commons.beanutils.PropertyUtils.copyProperties(dest, orig);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
