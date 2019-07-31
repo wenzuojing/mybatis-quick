@@ -20,12 +20,12 @@
 
     <distributionManagement>
         <repository>
-            <id>Releases</id>
-            <url>http://nexus.yuyou100.com/nexus/content/repositories/releases</url>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/70701-release-UuR6dk/</url>
         </repository>
         <snapshotRepository>
-            <id>Snapshots</id>
-            <url>http://nexus.yuyou100.com/nexus/content/repositories/snapshots/</url>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/70701-snapshot-hxB4as/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -157,27 +157,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
-                <configuration>
-                    <attach>true</attach>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+
         </plugins>
 
     </build>
